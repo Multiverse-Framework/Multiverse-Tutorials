@@ -461,31 +461,6 @@ def Xform "apartmentECAI" (
         }
     }
 
-    def "Cube13" (
-        prepend apiSchemas = ["MaterialBindingAPI"]
-        prepend references = @Assets/Engine/BasicShapes/Cube.usda@
-    )
-    {
-        rel material:binding = </apartmentECAI/Cube13/UnrealMaterial>
-        token visibility = "inherited"
-        matrix4d xformOp:transform = ( (2.081401, -0, 0, 0), (0, 0.025548, -0, 0), (0, 0, 1.823349, 0), (3.0798577211598137, -2.5401197232238983, 1.197923483224323, 1) )
-        uniform token[] xformOpOrder = ["xformOp:transform"]
-
-        def Material "UnrealMaterial" (
-            prepend references = @Assets/Game/Models/1161Lab/1161Doors/1161DoorA/M_1161DoorAGlass.usda@
-        )
-        {
-            token outputs:unreal:surface.connect = </apartmentECAI/Cube13/UnrealMaterial/UnrealShader.outputs:out>
-
-            def Shader "UnrealShader"
-            {
-                uniform token info:implementationSource = "sourceAsset"
-                uniform asset info:unreal:sourceAsset = @/Game/Models/1161Lab/1161Doors/1161DoorA/M_1161DoorAGlass.M_1161DoorAGlass@
-                token outputs:out
-            }
-        }
-    }
-
     def "SM_Ceiling_Panel_4" (
         prepend apiSchemas = ["MaterialBindingAPI"]
         prepend references = @Assets/Game/Meshes/Raum/SM_Ceiling_Panel_01.usda@
@@ -1819,31 +1794,6 @@ def Xform "apartmentECAI" (
         token visibility = "inherited"
         matrix4d xformOp:transform = ( (-0.9999999999920122, -0.000003996803986995002, 0, 0), (0.000003996803986995002, -0.9999999999920122, 0, 0), (0, 0, 1, 0), (-0.17067199618518353, -7.674096508470573, 1.0237771371167974, 1) )
         uniform token[] xformOpOrder = ["xformOp:transform"]
-    }
-
-    def "Cube14" (
-        prepend apiSchemas = ["MaterialBindingAPI"]
-        prepend references = @Assets/Engine/BasicShapes/Cube.usda@
-    )
-    {
-        rel material:binding = </apartmentECAI/Cube14/UnrealMaterial>
-        token visibility = "inherited"
-        matrix4d xformOp:transform = ( (2.081401, -0, 0, 0), (0, 0.025548, -0, 0), (0, 0, 1.823349, 0), (7.117386920914002, -2.5401197232238983, 1.197923483224323, 1) )
-        uniform token[] xformOpOrder = ["xformOp:transform"]
-
-        def Material "UnrealMaterial" (
-            prepend references = @Assets/Game/Models/1161Lab/1161Doors/1161DoorA/M_1161DoorAGlass.usda@
-        )
-        {
-            token outputs:unreal:surface.connect = </apartmentECAI/Cube14/UnrealMaterial/UnrealShader.outputs:out>
-
-            def Shader "UnrealShader"
-            {
-                uniform token info:implementationSource = "sourceAsset"
-                uniform asset info:unreal:sourceAsset = @/Game/Models/1161Lab/1161Doors/1161DoorA/M_1161DoorAGlass.M_1161DoorAGlass@
-                token outputs:out
-            }
-        }
     }
 
     def "SM_Window_Handle" (
@@ -5643,31 +5593,6 @@ def Xform "apartmentECAI" (
         token visibility = "inherited"
         matrix4d xformOp:transform = ( (-0.9999999999920122, -0.000003996803986995002, 0, 0), (0.000003996803986995002, -0.9999999999920122, 0, 0), (0, 0, 1, 0), (0.02604552941783704, -7.6740952884706, 1.0235479471219202, 1) )
         uniform token[] xformOpOrder = ["xformOp:transform"]
-    }
-
-    def "Cube10" (
-        prepend apiSchemas = ["MaterialBindingAPI"]
-        prepend references = @Assets/Engine/BasicShapes/Cube.usda@
-    )
-    {
-        rel material:binding = </apartmentECAI/Cube10/UnrealMaterial>
-        token visibility = "inherited"
-        matrix4d xformOp:transform = ( (2.081401, -0, 0, 0), (0, 0.025548, -0, 0), (0, 0, 1.823349, 0), (-6.250126200298791, -2.540116363223974, 1.197923483224323, 1) )
-        uniform token[] xformOpOrder = ["xformOp:transform"]
-
-        def Material "UnrealMaterial" (
-            prepend references = @Assets/Game/Models/1161Lab/1161Doors/1161DoorA/M_1161DoorAGlass.usda@
-        )
-        {
-            token outputs:unreal:surface.connect = </apartmentECAI/Cube10/UnrealMaterial/UnrealShader.outputs:out>
-
-            def Shader "UnrealShader"
-            {
-                uniform token info:implementationSource = "sourceAsset"
-                uniform asset info:unreal:sourceAsset = @/Game/Models/1161Lab/1161Doors/1161DoorA/M_1161DoorAGlass.M_1161DoorAGlass@
-                token outputs:out
-            }
-        }
     }
 
     def "SM_Socket_004" (
