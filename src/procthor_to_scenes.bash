@@ -10,9 +10,9 @@ fi
 
 cd $(dirname $0)
 
-RESOURCES_DIR=$PWD/../resources
+OUTPUT_DIR=$PWD/../output
 
-HOUSE_DIR=$RESOURCES_DIR/house_${HOUSE_NUMBER}
+HOUSE_DIR=$OUTPUT_DIR/house_${HOUSE_NUMBER}
 
 # Get the house from the Procthor
 
@@ -20,4 +20,4 @@ python get_house.py --house=${HOUSE_NUMBER}
 
 # # Convert the house into USD
 
-python procthor_to_scene.py --house=${HOUSE_NUMBER} --output_dir=${RESOURCES_DIR}
+python procthor_to_scene.py --house=${HOUSE_NUMBER} --output_dir=${OUTPUT_DIR}
