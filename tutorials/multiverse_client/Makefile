@@ -12,6 +12,7 @@ MYLIB = my_multiverse_client
 all: $(TARGET) $(LIB_DIR)/lib$(MYLIB).so
 
 $(TARGET): $(LIB_DIR)/lib$(MYLIB).so
+	mkdir -p $(BIN_DIR)
 	$(CC) $(CFLAGS) -Llib -o $(TARGET) $(SRC_DIR)/main.cpp -l$(MYLIB) -lmultiverse_client_json -ljsoncpp -pthread
 
 $(LIB_DIR)/lib$(MYLIB).so:
