@@ -1,5 +1,18 @@
 #!/bin/bash
 
+for virtualenvwrapper in $(which virtualenvwrapper.sh) /usr/share/virtualenvwrapper/virtualenvwrapper.sh /usr/local/bin/virtualenvwrapper.sh /home/$USER/.local/bin/virtualenvwrapper.sh; do
+    if [ -f $virtualenvwrapper ]; then
+        . $virtualenvwrapper
+        break
+    fi
+done
+if [ ! -f $virtualenvwrapper ]; then
+    echo "virtualenvwrapper.sh not found"
+    exit 1
+fi
+
+workon multiverse
+
 HOUSE_NUMBER=$1
 
 # Check if the user input is a number
