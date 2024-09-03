@@ -10,9 +10,9 @@ fi
 
 cd $(dirname $0)
 
-RESOURCES_DIR=$PWD/../resources
+OUTPUT_DIR=$PWD/../output
 
-HOUSE_DIR=$RESOURCES_DIR/house_${HOUSE_NUMBER}
+HOUSE_DIR=$OUTPUT_DIR/house_${HOUSE_NUMBER}
 
 IN_USD=${HOUSE_DIR}/house_${HOUSE_NUMBER}.usda
 
