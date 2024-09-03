@@ -21,6 +21,8 @@ if ! [[ ${HOUSE_NUMBER} =~ ^[0-9]+$ ]]; then
   exit 1
 fi
 
+echo "Get house ${HOUSE_NUMBER}"
+
 cd $(dirname $0)
 
 OUTPUT_DIR=$PWD/../output

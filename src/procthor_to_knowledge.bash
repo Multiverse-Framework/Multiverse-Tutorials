@@ -21,6 +21,8 @@ if ! [[ ${HOUSE_NUMBER} =~ ^[0-9]+$ ]]; then
   exit 1
 fi
 
+echo "Translate house ${HOUSE_NUMBER} to knowledge"
+
 cd $(dirname $0)
 
 OUTPUT_DIR=$PWD/../output
@@ -38,21 +40,21 @@ USD_SEMANTIC_TAGGED_FLATTEN=${HOUSE_DIR}/house_${HOUSE_NUMBER}_semantic_tagged_f
 OUT_OWL=${HOUSE_DIR}/house_${HOUSE_NUMBER}.owl
 
 # Semantic reporting on the USD (Optional)
-
+echo "Running semantic reporting on ${IN_USD}"
 semantic_reporting --in_usd=${IN_USD} --in_TBox_usd=${TBOX_USD} --out_usd=${USD_SEMANTIC_REPORTED}
 
 # Semantic tagging on the USD
-
-python semantic_tagging.py --in_usd=${IN_USD} --in_TBox_usd=${USD_SEMANTIC_REPORTED} --out_ABox_usd=${USD_SEMANTIC_TAGGED}
+echo "Running semantic tagging on ${USD_SEMANTIC_REPORTED}"
+python semantic_tagging.py --in_usd=${USD_SEMANTIC_REPORTED} --in_TBox_usd=${TBOX_USD} --out_ABox_usd=${USD_SEMANTIC_TAGGED}
 
 # # Flatten the USD
-
+echo "Flatten the semantic tagged USD to ${USD_SEMANTIC_TAGGED_FLATTEN}"
 usdcat ${USD_SEMANTIC_TAGGED} -o ${USD_SEMANTIC_TAGGED_FLATTEN} --flatten
 
 # # Clean up the flatten USD
-
+echo "Clean up the flatten semantic tagged USD to ${USD_SEMANTIC_TAGGED_FLATTEN}"
 python clean_up_usd.py --in_usd=${USD_SEMANTIC_TAGGED_FLATTEN} --out_usd=${USD_SEMANTIC_TAGGED_FLATTEN}
 
 # # Conver the USD into OWL
-
+echo "Convert the cleaned flatten semantic tagged USD to OWL ${OUT_OWL}"
 usd_to_ABox --in_usd=${USD_SEMANTIC_TAGGED} --in_owl=${TBOX_OWL} --out_owl=${OUT_OWL}
