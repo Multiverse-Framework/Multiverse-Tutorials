@@ -3,6 +3,7 @@
 import os
 import re
 import json
+from dataclasses import dataclass
 from typing import Dict, Any, List
 import numpy
 from scipy.spatial.transform import Rotation
@@ -114,6 +115,24 @@ def get_asset_paths(asset_name: str) -> List[str]:
     return asset_paths
 
 
+@dataclass(unsafe_hash=True)
+class Point2D:
+    x: float
+    z: float
+
+
+@dataclass
+class Cube:
+    origin: numpy.array
+    scale: numpy.array
+
+
+x_90_matrix = numpy.array([[1, 0, 0],
+                           [0, 0, -1],
+                           [0, 1, 0]])
+x_90_quat = Rotation.from_matrix(x_90_matrix).as_quat()
+
+
 class ProcthorImporter(Factory):
     def __init__(self, file_path: str, config: Configuration):
         super().__init__(file_path, config)
@@ -122,7 +141,20 @@ class ProcthorImporter(Factory):
 
         self._world_builder = WorldBuilder(usd_file_path=self.tmp_usd_file_path)
 
-        body_builder = self._world_builder.add_body(body_name=house_name)
+        self._world_builder.add_body(body_name=house_name)
+
+        walls = house["walls"]
+        self.wall_height = None
+        for wall in walls:
+            for wall_polygon in wall["polygon"]:
+                if wall_polygon["y"] != 0:
+                    self.wall_height = wall_polygon["y"]
+                    break
+            if self.wall_height is not None:
+                break
+
+        if self.wall_height is None:
+            raise ValueError("Wall height not found")
 
         rooms = house["rooms"]
         for room in rooms:
@@ -132,7 +164,6 @@ class ProcthorImporter(Factory):
         for obj in objects:
             self.import_object(house_name, obj)
 
-        walls = house["walls"]
         doors = house["doors"]
         walls_with_door = {}
         for door_id, door in enumerate(doors):
@@ -149,7 +180,94 @@ class ProcthorImporter(Factory):
         room_name = room["roomType"]
         room_id = room["id"].split("|")[-1]
         room_name = f"{room_name}_{room_id}"
-        self._world_builder.add_body(body_name=room_name, parent_body_name=house_name)
+        body_builder = self._world_builder.add_body(body_name=room_name, parent_body_name=house_name)
+
+        points_x = set()
+        points_y = 0.0
+        points_z = set()
+        edges_x = set()
+        edges_z = set()
+        for i in range(len(room["floorPolygon"])):
+            floor_polygon = room["floorPolygon"][i]
+            if floor_polygon["y"] != points_y:
+                raise ValueError(f"Invalid floor polygon of room {room_id}: {floor_polygon}")
+            points_x.add(floor_polygon["x"])
+            points_z.add(floor_polygon["z"])
+            last_floor_polygon = room["floorPolygon"][i - 1]
+            point_1 = Point2D(last_floor_polygon["x"], last_floor_polygon["z"])
+            point_2 = Point2D(floor_polygon["x"], floor_polygon["z"])
+            if point_1.x == point_2.x:
+                if point_1.z < point_2.z:
+                    edges_z.add((point_1, point_2))
+                else:
+                    edges_z.add((point_2, point_1))
+            elif point_1.z == point_2.z:
+                if point_1.x < point_2.x:
+                    edges_x.add((point_1, point_2))
+                else:
+                    edges_x.add((point_2, point_1))
+            else:
+                raise ValueError(f"Invalid floor polygon of room {room_id}: {floor_polygon}")
+
+        points_x = list(sorted(points_x))
+        points_z = list(sorted(points_z))
+        cube_scale_y = self.wall_height / 2.0
+        cube_origin_y = self.wall_height / 2.0
+        cubes = []
+        for i in range(len(points_x) - 1):
+            for j in range(len(points_z) - 1):
+                cube_origin_x = (points_x[i + 1] + points_x[i]) / 2.0
+                cube_origin_z = (points_z[j + 1] + points_z[j]) / 2.0
+
+                cutting_edge_nr_1 = 0
+                cutting_edge_nr_2 = 0
+                cutting_edge_nr_3 = 0
+                cutting_edge_nr_4 = 0
+                for edge_x in edges_x:
+                    if edge_x[0].x < cube_origin_x < edge_x[1].x:
+                        if edge_x[0].z > cube_origin_z:
+                            cutting_edge_nr_1 += 1
+                        else:
+                            cutting_edge_nr_3 += 1
+                for edge_z in edges_z:
+                    if edge_z[0].z < cube_origin_z < edge_z[1].z:
+                        if edge_z[0].x > cube_origin_x:
+                            cutting_edge_nr_2 += 1
+                        else:
+                            cutting_edge_nr_4 += 1
+
+                if (cutting_edge_nr_1 % 2 == 1 and
+                        cutting_edge_nr_2 % 2 == 1 and
+                        cutting_edge_nr_3 % 2 == 1 and
+                        cutting_edge_nr_4 % 2 == 1):
+                    cube_scale_x = numpy.fabs(points_x[i + 1] - points_x[i]) / 2.0
+                    cube_scale_z = numpy.fabs(points_z[j + 1] - points_z[j]) / 2.0
+                    cubes.append(
+                        Cube(origin=numpy.array([cube_origin_x, cube_origin_y, cube_origin_z]),
+                             scale=numpy.array([cube_scale_x, cube_scale_y, cube_scale_z])))
+                elif (cutting_edge_nr_1 % 2 == 0 and
+                      cutting_edge_nr_2 % 2 == 0 and
+                      cutting_edge_nr_3 % 2 == 0 and
+                      cutting_edge_nr_4 % 2 == 0):
+                    continue
+                else:
+                    raise ValueError(f"Invalid room {room_id} polygon")
+
+        room_origin_x = numpy.average([cube.origin[0] for cube in cubes])
+        room_origin_y = numpy.average([cube.origin[1] for cube in cubes])
+        room_origin_z = numpy.average([cube.origin[2] for cube in cubes])
+        room_origin = numpy.array([room_origin_x, room_origin_y, room_origin_z])
+        body_builder.set_transform(pos=room_origin, quat=x_90_quat)
+        for i, cube in enumerate(cubes):
+            geom_property = GeomProperty(geom_type=GeomType.CUBE,
+                                         is_visible=True,
+                                         is_collidable=False,
+                                         rgba=numpy.array([0.9, 0.9, 0.9, 0.1]))
+            geom_builder = body_builder.add_geom(geom_name=f"SM_{room_name}_{i}",
+                                                 geom_property=geom_property)
+            geom_builder.set_transform(pos=cube.origin - Rotation.from_matrix(x_90_matrix).inv().apply(room_origin),
+                                       scale=cube.scale)
+            geom_builder.build()
 
     def import_object(self, parent_body_name: str, obj: Dict[str, Any]) -> None:
         body_name = obj["id"].replace("|", "_").replace("_surface", "")
@@ -448,6 +566,7 @@ class ProcthorImporter(Factory):
                                                                  geom_property=geom_property)
                             geom_builder.add_mesh(mesh_name=mesh_name, mesh_property=mesh_property)
                             mesh_idx += 1
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Auto semantic tagging based on object names")
