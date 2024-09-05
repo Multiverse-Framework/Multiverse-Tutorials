@@ -543,8 +543,6 @@ class ProcthorImporter(Factory):
                                                      geom_property=geom_property)
                 geom_builder.add_mesh(mesh_name=mesh_name, mesh_property=mesh_property)
         else:
-            if "Chair" in asset_name:
-                print(asset_name)
             file_text = re.sub(r'[^a-zA-Z]', '', asset_name)
             for root, dirs, files in os.walk(asset_dir):
                 for file in files:
