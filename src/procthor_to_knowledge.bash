@@ -47,14 +47,14 @@ semantic_reporting --in_usd=${IN_USD} --in_TBox_usd=${TBOX_USD} --out_usd=${USD_
 echo "Running semantic tagging on ${USD_SEMANTIC_REPORTED}"
 python semantic_tagging.py --in_usd=${USD_SEMANTIC_REPORTED} --in_TBox_usd=${TBOX_USD} --out_ABox_usd=${USD_SEMANTIC_TAGGED}
 
-# # Flatten the USD
+# Flatten the USD
 echo "Flatten the semantic tagged USD to ${USD_SEMANTIC_TAGGED_FLATTEN}"
 usdcat ${USD_SEMANTIC_TAGGED} -o ${USD_SEMANTIC_TAGGED_FLATTEN} --flatten
 
-# # Clean up the flatten USD
+# Clean up the flatten USD
 echo "Clean up the flatten semantic tagged USD to ${USD_SEMANTIC_TAGGED_FLATTEN}"
 python clean_up_usd.py --in_usd=${USD_SEMANTIC_TAGGED_FLATTEN} --out_usd=${USD_SEMANTIC_TAGGED_FLATTEN}
 
-# # Conver the USD into OWL
+# Conver the USD into OWL
 echo "Convert the cleaned flatten semantic tagged USD to OWL ${OUT_OWL}"
 usd_to_ABox --in_usd=${USD_SEMANTIC_TAGGED} --in_owl=${TBOX_OWL} --out_owl=${OUT_OWL}
