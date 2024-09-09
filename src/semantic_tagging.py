@@ -94,10 +94,10 @@ def auto_sem_tag(in_ABox_usd_file: str, in_TBox_Usd_file: str, out_ABox_usd_file
             
             semanticTagAPI = UsdOntology.SemanticTagAPI.Apply(prim)
 
-            if len(SOMA_sem_classes) > 0:
-                SOMA_sem_class = SOMA_sem_classes[0]
-                print(f"prim_name: {prim_name} is in sem_class: {SOMA_sem_class.name}")
-                semanticTagAPI.CreateSemanticLabelsRel().AddTarget(SOMA_sem_class)
+            # if len(SOMA_sem_classes) > 0:
+            #     SOMA_sem_class = SOMA_sem_classes[0]
+            #     print(f"prim_name: {prim_name} is in sem_class: {SOMA_sem_class.name}")
+            #     semanticTagAPI.CreateSemanticLabelsRel().AddTarget(SOMA_sem_class)
 
             if len(SOMA_DFL_sem_classes) > 0:
                 SOMA_DFL_sem_class = SOMA_DFL_sem_classes[0]
