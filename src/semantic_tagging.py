@@ -59,6 +59,8 @@ def auto_sem_tag(in_ABox_usd_file: str, in_TBox_Usd_file: str, out_ABox_usd_file
 
         if prim.IsA(UsdGeom.Xform):
             prim_name = prim.GetName().replace("surface", "")
+            words = prim_name.split('_')
+            prim_name = ''.join(word.capitalize() for word in words)
             prim_name = ''.join(filter(str.isalpha, prim_name))
             if prim_name in synonyms:
                 prim_name = synonyms[prim_name]

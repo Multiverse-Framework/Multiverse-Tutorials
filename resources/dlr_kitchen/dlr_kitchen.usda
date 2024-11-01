@@ -1,0 +1,2478 @@
+#usda 1.0
+(
+    defaultPrim = "dlr_kitchen"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Urdf "urdf"
+{
+    string urdf:name = "dlr_kitchen"
+
+    def UrdfRobot "robot"
+    {
+        def UrdfMaterial "materials"
+        {
+        }
+    }
+}
+
+def Xform "dlr_kitchen" (
+    prepend apiSchemas = ["UrdfLinkAPI"]
+)
+{
+    def Xform "kitchenette" (
+        prepend apiSchemas = ["UrdfLinkAPI"]
+    )
+    {
+        matrix4d xformOp:transform = ( (-0.0000037391993661373135, 0.9999999999930093, 0, 0), (-0.9999999999930093, -0.0000037391993661373135, 0, 0), (0, 0, 1, 0), (2.4646999835968018, 3.9658401012420654, 0.786208987236023, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+
+        def Mesh "SM_kitchenette_collision_0" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Kitchenette_001.usda@</SM_UCX_Kitchenette_001>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (0, 0, 1.5707964)
+            point3f urdf:collision:origin:xyz = (-0.020835012, -0.8877913, -0.28469467)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Kitchenette_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0.999999999999999, 0, 0), (-0.999999999999999, -4.371139006309477e-8, 0, 0), (0, 0, 1, 0), (-0.020835012197494507, -0.8877912759780884, -0.2846946716308594, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_kitchenette_collision_1" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Kitchenette_002.usda@</SM_UCX_Kitchenette_002>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, -1.5707964, 0)
+            point3f urdf:collision:origin:xyz = (-0.02988443, -0.0010682791, 0.12630552)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Kitchenette_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 5.551115123125783e-17, 0.9999999999999989, 0), (-0.999999999999998, -4.371139006309477e-8, -4.371139000758362e-8, 0), (4.371139000758362e-8, -0.9999999999999989, 1.9984014443252818e-15, 0), (-0.029884429648518562, -0.0010682791471481323, 0.12630552053451538, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_kitchenette_collision_2" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Kitchenette_003.usda@</SM_UCX_Kitchenette_003>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, -1.5707964, 0)
+            point3f urdf:collision:origin:xyz = (0.029360503, -0.0010682791, -0.732209)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Kitchenette_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 5.551115123125783e-17, 0.9999999999999989, 0), (-0.999999999999998, -4.371139006309477e-8, -4.371139000758362e-8, 0), (4.371139000758362e-8, -0.9999999999999989, 1.9984014443252818e-15, 0), (0.02936050295829773, -0.0010682791471481323, -0.7322090268135071, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_kitchenette_collision_3" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Kitchenette_004.usda@</SM_UCX_Kitchenette_004>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, 0, 0)
+            point3f urdf:collision:origin:xyz = (0.27216503, 0.014695749, -0.28469458)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Kitchenette_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, -4.371139006309477e-8, 0.999999999999999, 0), (0, -0.999999999999999, -4.371139006309477e-8, 0), (0.2721650302410126, 0.014695748686790466, -0.2846945822238922, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_kitchenette_collision_4" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Kitchenette_005.usda@</SM_UCX_Kitchenette_005>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (0, 0, 1.5707964)
+            point3f urdf:collision:origin:xyz = (-0.020835012, 0.31219628, -0.28469467)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Kitchenette_005.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0.999999999999999, 0, 0), (-0.999999999999999, -4.371139006309477e-8, 0, 0), (0, 0, 1, 0), (-0.020835012197494507, 0.312196284532547, -0.2846946716308594, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_kitchenette_collision_5" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Kitchenette_006.usda@</SM_UCX_Kitchenette_006>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (0, 0, 1.5707964)
+            point3f urdf:collision:origin:xyz = (-0.020835012, -0.2828039, -0.28469467)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Kitchenette_006.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0.999999999999999, 0, 0), (-0.999999999999999, -4.371139006309477e-8, 0, 0), (0, 0, 1, 0), (-0.020835012197494507, -0.28280389308929443, -0.2846946716308594, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_kitchenette_collision_6" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Kitchenette_007.usda@</SM_UCX_Kitchenette_007>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, -1.3322676e-15, 1.5707964)
+            point3f urdf:collision:origin:xyz = (0.0046520233, -0.23630384, -0.2506871)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Kitchenette_007.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0.9999999999999989, 1.27675647831893e-15, 0), (4.371139000758362e-8, 6.661338147750939e-16, 0.9999999999999989, 0), (0.999999999999998, 4.371139000758362e-8, -4.371139006309477e-8, 0), (0.0046520233154296875, -0.23630383610725403, -0.2506870925426483, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_kitchenette_collision_7" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Kitchenette_008.usda@</SM_UCX_Kitchenette_008>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, -1.3322676e-15, 1.5707964)
+            point3f urdf:collision:origin:xyz = (0.0046520233, 0.2656961, -0.2506871)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Kitchenette_008.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0.9999999999999989, 1.27675647831893e-15, 0), (4.371139000758362e-8, 6.661338147750939e-16, 0.9999999999999989, 0), (0.999999999999998, 4.371139000758362e-8, -4.371139006309477e-8, 0), (0.0046520233154296875, 0.26569610834121704, -0.2506870925426483, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_kitchenette_collision_8" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Kitchenette_009.usda@</SM_UCX_Kitchenette_009>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (3.1415927, -1.5707964, 0)
+            point3f urdf:collision:origin:xyz = (-0.020667762, 0.014696181, 0.043964867)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Kitchenette_009.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0, 0.999999999999999, 0), (8.742278000372465e-8, -0.999999999999996, 3.8213712347318754e-15, 0), (0.9999999999999952, 8.742278000372473e-8, 4.371139006309477e-8, 0), (-0.02066776156425476, 0.014696180820465088, 0.04396486654877663, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_kitchenette_collision_9" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Kitchenette_010.usda@</SM_UCX_Kitchenette_010>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, 0, 0)
+            point3f urdf:collision:origin:xyz = (-0.32192555, 0.01455313, 0.043964867)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Kitchenette_010.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, -4.371139006309477e-8, 0.999999999999999, 0), (0, -0.999999999999999, -4.371139006309477e-8, 0), (-0.321925550699234, 0.01455312967300415, 0.04396486654877663, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_kitchenette_collision_10" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Kitchenette_011.usda@</SM_UCX_Kitchenette_011>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, -1.5707964, 0)
+            point3f urdf:collision:origin:xyz = (0.0046520084, 0.014696181, -0.048288614)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Kitchenette_011.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 5.551115123125783e-17, 0.9999999999999989, 0), (-0.999999999999998, -4.371139006309477e-8, -4.371139000758362e-8, 0), (4.371139000758362e-8, -0.9999999999999989, 1.9984014443252818e-15, 0), (0.004652008414268494, 0.014696180820465088, -0.04828861355781555, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_kitchenette_collision_11" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Kitchenette_012.usda@</SM_UCX_Kitchenette_012>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, -1.5707964, 0)
+            point3f urdf:collision:origin:xyz = (0.0046520084, 0.014696181, -0.4580366)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Kitchenette_012.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 5.551115123125783e-17, 0.9999999999999989, 0), (-0.999999999999998, -4.371139006309477e-8, -4.371139000758362e-8, 0), (4.371139000758362e-8, -0.9999999999999989, 1.9984014443252818e-15, 0), (0.004652008414268494, 0.014696180820465088, -0.4580366015434265, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_kitchenette_collision_12" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Kitchenette_013.usda@</SM_UCX_Kitchenette_013>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (0, -0.000004776746, 0)
+            point3f urdf:collision:origin:xyz = (-0.3377905, 0.23469609, 0.047811788)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Kitchenette_013.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (0.9999999999885913, 0, 0.0000047767462092270105, 0), (0, 1, 0, 0), (-0.0000047767462092270105, 0, 0.9999999999885913, 0), (-0.33779048919677734, 0.23469609022140503, 0.04781178757548332, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_kitchenette_collision_13" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Kitchenette_014.usda@</SM_UCX_Kitchenette_014>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (0, -0.000004766322, 0)
+            point3f urdf:collision:origin:xyz = (-0.33756486, -0.2053039, 0.047811784)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Kitchenette_014.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (0.9999999999886411, 0, 0.000004766322035702759, 0), (0, 1, 0, 0), (-0.000004766322035702759, 0, 0.9999999999886411, 0), (-0.3375648558139801, -0.20530390739440918, 0.047811783850193024, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_kitchenette_collision_14" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Kitchenette_015.usda@</SM_UCX_Kitchenette_015>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (0, 0, 1.5707964)
+            point3f urdf:collision:origin:xyz = (-0.020835012, 0.9076964, -0.28469467)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Kitchenette_015.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0.999999999999999, 0, 0), (-0.999999999999999, -4.371139006309477e-8, 0, 0), (0, 0, 1, 0), (-0.020835012197494507, 0.9076964259147644, -0.2846946716308594, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_kitchenette_collision_15" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Kitchenette_016.usda@</SM_UCX_Kitchenette_016>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, -1.5707964, 0)
+            point3f urdf:collision:origin:xyz = (-0.03407277, 0.014845118, 0.14729089)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Kitchenette_016.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 5.551115123125783e-17, 0.9999999999999989, 0), (-0.999999999999998, -4.371139006309477e-8, -4.371139000758362e-8, 0), (4.371139000758362e-8, -0.9999999999999989, 1.9984014443252818e-15, 0), (-0.03407277166843414, 0.014845117926597595, 0.1472908854484558, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def PhysicsPrismaticJoint "drawer_02_joint" (
+            prepend apiSchemas = ["UrdfJointAPI"]
+        )
+        {
+            uniform token physics:axis = "Z"
+            rel physics:body0 = </dlr_kitchen/kitchenette>
+            rel physics:body1 = </dlr_kitchen/drawer_02>
+            bool physics:collisionEnabled = 0
+            point3f physics:localPos0 = (-0.148, 0.616, -0.157)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.7071068, 0, -0.7071068, 0)
+            quatf physics:localRot1 = (0.7071068, 0, -0.7071068, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.4
+            vector3f urdf:joint:axis = (-1, 0, 0)
+            prepend rel urdf:joint:child = </dlr_kitchen/drawer_02>
+            float urdf:joint:limit:effort = 1000
+            float urdf:joint:limit:lower = 0
+            float urdf:joint:limit:upper = 0.4
+            float urdf:joint:limit:velocity = 1000
+            float3 urdf:joint:origin:rpy = (0, 0, 0)
+            point3f urdf:joint:origin:xyz = (-0.148, 0.616, -0.157)
+            prepend rel urdf:joint:parent = </dlr_kitchen/kitchenette>
+            uniform token urdf:joint:type = "prismatic"
+        }
+
+        def PhysicsPrismaticJoint "drawer_03_joint" (
+            prepend apiSchemas = ["UrdfJointAPI"]
+        )
+        {
+            uniform token physics:axis = "Z"
+            rel physics:body0 = </dlr_kitchen/kitchenette>
+            rel physics:body1 = </dlr_kitchen/drawer_03>
+            bool physics:collisionEnabled = 0
+            point3f physics:localPos0 = (-0.097, 0.616, -0.522)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.7071068, 0, -0.7071068, 0)
+            quatf physics:localRot1 = (0.7071068, 0, -0.7071068, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.4
+            vector3f urdf:joint:axis = (-1, 0, 0)
+            prepend rel urdf:joint:child = </dlr_kitchen/drawer_03>
+            float urdf:joint:limit:effort = 1000
+            float urdf:joint:limit:lower = 0
+            float urdf:joint:limit:upper = 0.4
+            float urdf:joint:limit:velocity = 1000
+            float3 urdf:joint:origin:rpy = (0, 0, 0)
+            point3f urdf:joint:origin:xyz = (-0.097, 0.616, -0.522)
+            prepend rel urdf:joint:parent = </dlr_kitchen/kitchenette>
+            uniform token urdf:joint:type = "prismatic"
+        }
+
+        def PhysicsRevoluteJoint "oven_door_joint" (
+            prepend apiSchemas = ["UrdfJointAPI"]
+        )
+        {
+            uniform token physics:axis = "Z"
+            rel physics:body0 = </dlr_kitchen/kitchenette>
+            rel physics:body1 = </dlr_kitchen/oven_door>
+            bool physics:collisionEnabled = 0
+            point3f physics:localPos0 = (-0.316, 0.004, -0.486)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.7071068, 0.7071068, 0, 0)
+            quatf physics:localRot1 = (0.7071068, 0.7071068, 0, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 90.00021
+            vector3f urdf:joint:axis = (0, -1, 0)
+            prepend rel urdf:joint:child = </dlr_kitchen/oven_door>
+            float urdf:joint:limit:effort = 1000
+            float urdf:joint:limit:lower = 0
+            float urdf:joint:limit:upper = 1.5708001
+            float urdf:joint:limit:velocity = 1000
+            float3 urdf:joint:origin:rpy = (0, 0, 0)
+            point3f urdf:joint:origin:xyz = (-0.316, 0.004, -0.486)
+            prepend rel urdf:joint:parent = </dlr_kitchen/kitchenette>
+            uniform token urdf:joint:type = "revolute"
+        }
+
+        def PhysicsPrismaticJoint "oven_drawer_joint" (
+            prepend apiSchemas = ["UrdfJointAPI"]
+        )
+        {
+            uniform token physics:axis = "Z"
+            rel physics:body0 = </dlr_kitchen/kitchenette>
+            rel physics:body1 = </dlr_kitchen/oven_drawer>
+            bool physics:collisionEnabled = 0
+            point3f physics:localPos0 = (-0.148, 0.016, -0.557)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.7071068, 0, -0.7071068, 0)
+            quatf physics:localRot1 = (0.7071068, 0, -0.7071068, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.4
+            vector3f urdf:joint:axis = (-1, 0, 0)
+            prepend rel urdf:joint:child = </dlr_kitchen/oven_drawer>
+            float urdf:joint:limit:effort = 1000
+            float urdf:joint:limit:lower = 0
+            float urdf:joint:limit:upper = 0.4
+            float urdf:joint:limit:velocity = 1000
+            float3 urdf:joint:origin:rpy = (0, 0, 0)
+            point3f urdf:joint:origin:xyz = (-0.148, 0.016, -0.557)
+            prepend rel urdf:joint:parent = </dlr_kitchen/kitchenette>
+            uniform token urdf:joint:type = "prismatic"
+        }
+
+        def PhysicsPrismaticJoint "drawer_04_joint" (
+            prepend apiSchemas = ["UrdfJointAPI"]
+        )
+        {
+            uniform token physics:axis = "Z"
+            rel physics:body0 = </dlr_kitchen/kitchenette>
+            rel physics:body1 = </dlr_kitchen/drawer_04>
+            bool physics:collisionEnabled = 0
+            point3f physics:localPos0 = (-0.148, -0.584, 0.043)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.7071068, 0, -0.7071068, 0)
+            quatf physics:localRot1 = (0.7071068, 0, -0.7071068, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.4
+            vector3f urdf:joint:axis = (-1, 0, 0)
+            prepend rel urdf:joint:child = </dlr_kitchen/drawer_04>
+            float urdf:joint:limit:effort = 1000
+            float urdf:joint:limit:lower = 0
+            float urdf:joint:limit:upper = 0.4
+            float urdf:joint:limit:velocity = 1000
+            float3 urdf:joint:origin:rpy = (0, 0, 0)
+            point3f urdf:joint:origin:xyz = (-0.148, -0.584, 0.043)
+            prepend rel urdf:joint:parent = </dlr_kitchen/kitchenette>
+            uniform token urdf:joint:type = "prismatic"
+        }
+
+        def PhysicsPrismaticJoint "drawer_05_joint" (
+            prepend apiSchemas = ["UrdfJointAPI"]
+        )
+        {
+            uniform token physics:axis = "Z"
+            rel physics:body0 = </dlr_kitchen/kitchenette>
+            rel physics:body1 = </dlr_kitchen/drawer_05>
+            bool physics:collisionEnabled = 0
+            point3f physics:localPos0 = (-0.148, -0.584, -0.157)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.7071068, 0, -0.7071068, 0)
+            quatf physics:localRot1 = (0.7071068, 0, -0.7071068, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.4
+            vector3f urdf:joint:axis = (-1, 0, 0)
+            prepend rel urdf:joint:child = </dlr_kitchen/drawer_05>
+            float urdf:joint:limit:effort = 1000
+            float urdf:joint:limit:lower = 0
+            float urdf:joint:limit:upper = 0.4
+            float urdf:joint:limit:velocity = 1000
+            float3 urdf:joint:origin:rpy = (0, 0, 0)
+            point3f urdf:joint:origin:xyz = (-0.148, -0.584, -0.157)
+            prepend rel urdf:joint:parent = </dlr_kitchen/kitchenette>
+            uniform token urdf:joint:type = "prismatic"
+        }
+
+        def PhysicsPrismaticJoint "drawer_06_joint" (
+            prepend apiSchemas = ["UrdfJointAPI"]
+        )
+        {
+            uniform token physics:axis = "Z"
+            rel physics:body0 = </dlr_kitchen/kitchenette>
+            rel physics:body1 = </dlr_kitchen/drawer_06>
+            bool physics:collisionEnabled = 0
+            point3f physics:localPos0 = (-0.097, -0.584, -0.522)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.7071068, 0, -0.7071068, 0)
+            quatf physics:localRot1 = (0.7071068, 0, -0.7071068, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.4
+            vector3f urdf:joint:axis = (-1, 0, 0)
+            prepend rel urdf:joint:child = </dlr_kitchen/drawer_06>
+            float urdf:joint:limit:effort = 1000
+            float urdf:joint:limit:lower = 0
+            float urdf:joint:limit:upper = 0.4
+            float urdf:joint:limit:velocity = 1000
+            float3 urdf:joint:origin:rpy = (0, 0, 0)
+            point3f urdf:joint:origin:xyz = (-0.097, -0.584, -0.522)
+            prepend rel urdf:joint:parent = </dlr_kitchen/kitchenette>
+            uniform token urdf:joint:type = "prismatic"
+        }
+
+        def PhysicsPrismaticJoint "drawer_01_joint" (
+            prepend apiSchemas = ["UrdfJointAPI"]
+        )
+        {
+            uniform token physics:axis = "Z"
+            rel physics:body0 = </dlr_kitchen/kitchenette>
+            rel physics:body1 = </dlr_kitchen/drawer_01>
+            bool physics:collisionEnabled = 0
+            point3f physics:localPos0 = (-0.148, 0.616, 0.043)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.7071068, 0, -0.7071068, 0)
+            quatf physics:localRot1 = (0.7071068, 0, -0.7071068, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.4
+            vector3f urdf:joint:axis = (-1, 0, 0)
+            prepend rel urdf:joint:child = </dlr_kitchen/drawer_01>
+            float urdf:joint:limit:effort = 1000
+            float urdf:joint:limit:lower = 0
+            float urdf:joint:limit:upper = 0.4
+            float urdf:joint:limit:velocity = 1000
+            float3 urdf:joint:origin:rpy = (0, 0, 0)
+            point3f urdf:joint:origin:xyz = (-0.148, 0.616, 0.043)
+            prepend rel urdf:joint:parent = </dlr_kitchen/kitchenette>
+            uniform token urdf:joint:type = "prismatic"
+        }
+    }
+
+    def Xform "drawer_02" (
+        prepend apiSchemas = ["UrdfLinkAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI"]
+    )
+    {
+        point3f physics:centerOfMass = (0.07188069, -0.00024757386, -0.0628738)
+        float3 physics:diagonalInertia = (0.25961867, 0.3152993, 0.51445603)
+        bool physics:kinematicEnabled = 0
+        float physics:mass = 6.1831446
+        quatf physics:principalAxes = (0.00015154743, 0.9979493, 0.00036479018, -0.06400771)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.25961867
+        float urdf:link:inertial:inertia:iyy = 0.3152993
+        float urdf:link:inertial:inertia:izz = 0.51445603
+        float urdf:link:inertial:mass = 6.1831446
+        float3 urdf:link:inertial:origin:rpy = (3.1413348, 0.12810309, 0.0007145388)
+        point3f urdf:link:inertial:origin:xyz = (0.07188069, -0.00024757386, -0.0628738)
+        matrix4d xformOp:transform = ( (-0.0000037391993661373135, 0.9999999999930093, 0, 0), (-0.9999999999930093, -0.0000037391993661373135, 0, 0), (0, 0, 1, 0), (1.8487005403404815, 3.8178377959889542, 0.6292089819908142, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+
+        def Mesh "SM_drawer_02_collision_0" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_02_001.usda@</SM_UCX_Drawer_02_001>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (3.1415927, -1.5707964, 0)
+            point3f urdf:collision:origin:xyz = (0.11408047, 1.4901161e-8, -0.08638661)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_02_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0, 0.999999999999999, 0), (8.742278000372465e-8, -0.999999999999996, 3.8213712347318754e-15, 0), (0.9999999999999952, 8.742278000372473e-8, 4.371139006309477e-8, 0), (0.11408046633005142, 1.4901161193847656e-8, -0.08638661354780197, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_drawer_02_collision_1" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_02_002.usda@</SM_UCX_Drawer_02_002>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, 0, 0)
+            point3f urdf:collision:origin:xyz = (-0.17442794, -0.0008446574, -0.037919834)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_02_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, -4.371139006309477e-8, 0.999999999999999, 0), (0, -0.999999999999999, -4.371139006309477e-8, 0), (-0.17442794144153595, -0.0008446574211120605, -0.03791983425617218, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_drawer_02_collision_2" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_02_003.usda@</SM_UCX_Drawer_02_003>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, 0, 0)
+            point3f urdf:collision:origin:xyz = (0.3939415, -0.00080162287, -0.019886844)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_02_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, -4.371139006309477e-8, 0.999999999999999, 0), (0, -0.999999999999999, -4.371139006309477e-8, 0), (0.3939414918422699, -0.0008016228675842285, -0.019886843860149384, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_drawer_02_collision_3" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_02_004.usda@</SM_UCX_Drawer_02_004>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (3.1415927, -1.5707964, 0)
+            point3f urdf:collision:origin:xyz = (0.110905446, -0.2778017, 0.03661313)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_02_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0, 0.999999999999999, 0), (8.742278000372465e-8, -0.999999999999996, 3.8213712347318754e-15, 0), (0.9999999999999952, 8.742278000372473e-8, 4.371139006309477e-8, 0), (0.11090544611215591, -0.2778016924858093, 0.03661312907934189, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_drawer_02_collision_4" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_02_005.usda@</SM_UCX_Drawer_02_005>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (3.1415927, -1.5707964, 0)
+            point3f urdf:collision:origin:xyz = (0.110905446, 0.27619833, 0.03661313)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_02_005.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0, 0.999999999999999, 0), (8.742278000372465e-8, -0.999999999999996, 3.8213712347318754e-15, 0), (0.9999999999999952, 8.742278000372473e-8, 4.371139006309477e-8, 0), (0.11090544611215591, 0.2761983275413513, 0.03661312907934189, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_drawer_02_collision_5" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_02_006.usda@</SM_UCX_Drawer_02_006>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, -0.07772115, 1.5707964)
+            point3f urdf:collision:origin:xyz = (0.11090545, -0.27502388, -0.051164474)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_02_006.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.357943561572597e-8, 0.9969812315710851, 0.07764292559532149, 0), (4.710527007345533e-8, -0.07764292559531949, 0.9969812315710851, 0), (0.999999999999998, 4.7105270295499935e-8, -4.3579435393681365e-8, 0), (0.11090545356273651, -0.275023877620697, -0.051164474338293076, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_drawer_02_collision_6" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_02_007.usda@</SM_UCX_Drawer_02_007>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, 0.07772115, 1.5707964)
+            point3f urdf:collision:origin:xyz = (0.11090545, 0.27502388, -0.051164474)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_02_007.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.3579435393681365e-8, 0.9969812315710851, -0.07764292559532149, 0), (4.03175097196673e-8, 0.07764292559532326, 0.9969812315710851, 0), (0.9999999999999982, 4.03175098306896e-8, -4.3579435393681365e-8, 0), (0.11090545356273651, 0.275023877620697, -0.051164474338293076, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Xform "drawer_02_handle" (
+            prepend apiSchemas = ["UrdfLinkAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI"]
+        )
+        {
+            point3f physics:centerOfMass = (0.0026534921, 0.0012064726, -0.000007335149)
+            float3 physics:diagonalInertia = (0.000008702245, 0.00096747087, 0.00096945825)
+            float physics:mass = 0.083983034
+            quatf physics:principalAxes = (-0.53304553, -0.464603, 0.5330521, 0.4646094)
+            float urdf:link:inertial:inertia:ixx = 0.000008702245
+            float urdf:link:inertial:inertia:iyy = 0.00096747087
+            float urdf:link:inertial:inertia:izz = 0.00096945825
+            float urdf:link:inertial:mass = 0.083983034
+            float3 urdf:link:inertial:origin:rpy = (1.5707973, -0.13699229, -1.5708094)
+            point3f urdf:link:inertial:origin:xyz = (0.0026534921, 0.0012064726, -0.000007335149)
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, -0.0000037391993661373135, -0.9999999999930093, 0), (0, 0.9999999999930093, -0.0000037391993661373135, 0), (-0.20993900299072266, 0.0011699999449774623, 0.025767000392079353, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+
+            def Mesh "SM_drawer_02_handle_collision_0" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+                prepend references = @./dlr_kitchen/meshes/usd/UCX_DrawerHandle_001.usda@</SM_UCX_DrawerHandle_001>
+            )
+            {
+                uniform token physics:approximation = "convexHull"
+                bool physics:collisionEnabled = 1
+                color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+                float[] primvars:displayOpacity = [1]
+                float3 urdf:collision:origin:rpy = (0, 0, 0)
+                point3f urdf:collision:origin:xyz = (0.000002346933, 0.0012064725, 9.834766e-7)
+                asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_DrawerHandle_001.stl@
+                float3 urdf:geometry:mesh:scale = (1, 1, 1)
+                token visibility = "inherited"
+                matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0.000002346932888031006, 0.0012064725160598755, 9.834766387939453e-7, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Mesh "SM_drawer_02_handle_collision_1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+                prepend references = @./dlr_kitchen/meshes/usd/UCX_DrawerHandle_002.usda@</SM_UCX_DrawerHandle_002>
+            )
+            {
+                uniform token physics:approximation = "convexHull"
+                bool physics:collisionEnabled = 1
+                color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+                float[] primvars:displayOpacity = [1]
+                float3 urdf:collision:origin:rpy = (3.1415927, -1.5707964, 0)
+                point3f urdf:collision:origin:xyz = (0.0180117, 0.0012064725, 0.15946051)
+                asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_DrawerHandle_002.stl@
+                float3 urdf:geometry:mesh:scale = (1, 1, 1)
+                token visibility = "inherited"
+                matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0, 0.999999999999999, 0), (8.742278000372465e-8, -0.999999999999996, 3.8213712347318754e-15, 0), (0.9999999999999952, 8.742278000372473e-8, 4.371139006309477e-8, 0), (0.018011700361967087, 0.0012064725160598755, 0.15946051478385925, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Mesh "SM_drawer_02_handle_collision_2" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+                prepend references = @./dlr_kitchen/meshes/usd/UCX_DrawerHandle_003.usda@</SM_UCX_DrawerHandle_003>
+            )
+            {
+                uniform token physics:approximation = "convexHull"
+                bool physics:collisionEnabled = 1
+                color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+                float[] primvars:displayOpacity = [1]
+                float3 urdf:collision:origin:rpy = (3.1415927, -1.5707964, 0)
+                point3f urdf:collision:origin:xyz = (0.0180117, 0.0012064724, -0.15945649)
+                asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_DrawerHandle_003.stl@
+                float3 urdf:geometry:mesh:scale = (1, 1, 1)
+                token visibility = "inherited"
+                matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0, 0.999999999999999, 0), (8.742278000372465e-8, -0.999999999999996, 3.8213712347318754e-15, 0), (0.9999999999999952, 8.742278000372473e-8, 4.371139006309477e-8, 0), (0.018011700361967087, 0.0012064723996445537, -0.15945649147033691, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+        }
+    }
+
+    def Xform "drawer_03" (
+        prepend apiSchemas = ["UrdfLinkAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI"]
+    )
+    {
+        point3f physics:centerOfMass = (-0.009161649, -0.00032812098, -0.07310583)
+        float3 physics:diagonalInertia = (0.38564655, 0.4764746, 0.6430068)
+        bool physics:kinematicEnabled = 0
+        float physics:mass = 7.7570677
+        quatf physics:principalAxes = (0.00045899992, 0.99140584, 0.0021758925, -0.13080314)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.38564655
+        float urdf:link:inertial:inertia:iyy = 0.4764746
+        float urdf:link:inertial:inertia:izz = 0.6430068
+        float urdf:link:inertial:mass = 7.7570677
+        float3 urdf:link:inertial:origin:rpy = (3.1412396, 0.26235947, 0.004342933)
+        point3f urdf:link:inertial:origin:xyz = (-0.009161649, -0.00032812098, -0.07310583)
+        matrix4d xformOp:transform = ( (-0.0000037391993661373135, 0.9999999999930093, 0, 0), (-0.9999999999930093, -0.0000037391993661373135, 0, 0), (0, 0, 1, 0), (1.8487003496413175, 3.8688377950349233, 0.26420897245407104, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+
+        def Mesh "SM_drawer_03_collision_0" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_03_001.usda@</SM_UCX_Drawer_03_001>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, 0.07772117, 1.5707964)
+            point3f urdf:collision:origin:xyz = (0.060115878, 0.27502388, -0.113864854)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_03_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.3579435393681365e-8, 0.9969812298356301, -0.07764294787958859, 0), (4.031750888700003e-8, 0.07764294787959036, 0.9969812298356301, 0), (0.9999999999999982, 4.031750888700003e-8, -4.3579435393681365e-8, 0), (0.06011587753891945, 0.275023877620697, -0.11386485397815704, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_drawer_03_collision_1" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_03_002.usda@</SM_UCX_Drawer_03_002>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, -0.07772118, 1.5707964)
+            point3f urdf:collision:origin:xyz = (0.060115878, -0.27502388, -0.113864854)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_03_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.357943561572597e-8, 0.9969812292571452, 0.07764295530767751, 0), (4.7105271627767564e-8, -0.07764295530767562, 0.9969812292571452, 0), (0.9999999999999981, 4.7105271627767564e-8, -4.357943561572597e-8, 0), (0.06011587753891945, -0.275023877620697, -0.11386485397815704, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_drawer_03_collision_2" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_03_003.usda@</SM_UCX_Drawer_03_003>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (3.1415927, -1.5707964, 0)
+            point3f urdf:collision:origin:xyz = (0.06011587, 0.27619833, 0.04391294)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_03_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0, 0.999999999999999, 0), (8.742278000372465e-8, -0.999999999999996, 3.8213712347318754e-15, 0), (0.9999999999999952, 8.742278000372473e-8, 4.371139006309477e-8, 0), (0.06011587008833885, 0.2761983275413513, 0.043912939727306366, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_drawer_03_collision_3" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_03_004.usda@</SM_UCX_Drawer_03_004>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, -1.3322676e-15, 1.5707964)
+            point3f urdf:collision:origin:xyz = (0.06011587, -0.2778017, 0.043912943)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_03_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0.9999999999999989, 1.27675647831893e-15, 0), (4.371139000758362e-8, 6.661338147750939e-16, 0.9999999999999989, 0), (0.999999999999998, 4.371139000758362e-8, -4.371139006309477e-8, 0), (0.06011587008833885, -0.2778016924858093, 0.043912943452596664, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_drawer_03_collision_4" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_03_005.usda@</SM_UCX_Drawer_03_005>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, 0, 0)
+            point3f urdf:collision:origin:xyz = (0.34315193, -0.00036489964, -0.047587022)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_03_005.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, -4.371139006309477e-8, 0.999999999999999, 0), (0, -0.999999999999999, -4.371139006309477e-8, 0), (0.34315192699432373, -0.0003648996353149414, -0.04758702218532562, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_drawer_03_collision_5" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_03_006.usda@</SM_UCX_Drawer_03_006>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, 0, 0)
+            point3f urdf:collision:origin:xyz = (-0.22521752, -0.0008446574, 0.026221953)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_03_006.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, -4.371139006309477e-8, 0.999999999999999, 0), (0, -0.999999999999999, -4.371139006309477e-8, 0), (-0.2252175211906433, -0.0008446574211120605, 0.026221953332424164, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_drawer_03_collision_6" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_03_007.usda@</SM_UCX_Drawer_03_007>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (3.1415927, -1.5707964, 0)
+            point3f urdf:collision:origin:xyz = (0.06329089, 1.4901161e-8, -0.14908701)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_03_007.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0, 0.999999999999999, 0), (8.742278000372465e-8, -0.999999999999996, 3.8213712347318754e-15, 0), (0.9999999999999952, 8.742278000372473e-8, 4.371139006309477e-8, 0), (0.06329088658094406, 1.4901161193847656e-8, -0.14908701181411743, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Xform "drawer_03_handle" (
+            prepend apiSchemas = ["UrdfLinkAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI"]
+        )
+        {
+            point3f physics:centerOfMass = (0.0026534921, 0.0012064726, -0.000007335149)
+            float3 physics:diagonalInertia = (0.000008702245, 0.00096747087, 0.00096945825)
+            float physics:mass = 0.083983034
+            quatf physics:principalAxes = (-0.53304553, -0.464603, 0.5330521, 0.4646094)
+            float urdf:link:inertial:inertia:ixx = 0.000008702245
+            float urdf:link:inertial:inertia:iyy = 0.00096747087
+            float urdf:link:inertial:inertia:izz = 0.00096945825
+            float urdf:link:inertial:mass = 0.083983034
+            float3 urdf:link:inertial:origin:rpy = (1.5707973, -0.13699229, -1.5708094)
+            point3f urdf:link:inertial:origin:xyz = (0.0026534921, 0.0012064726, -0.000007335149)
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, -0.0000037391993661373135, -0.9999999999930093, 0), (0, 0.9999999999930093, -0.0000037391993661373135, 0), (-0.26072901487350464, 0.0004400000034365803, 0.1899079978466034, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+
+            def Mesh "SM_drawer_03_handle_collision_0" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+                prepend references = @./dlr_kitchen/meshes/usd/UCX_DrawerHandle_001.usda@</SM_UCX_DrawerHandle_001>
+            )
+            {
+                uniform token physics:approximation = "convexHull"
+                bool physics:collisionEnabled = 1
+                color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+                float[] primvars:displayOpacity = [1]
+                float3 urdf:collision:origin:rpy = (0, 0, 0)
+                point3f urdf:collision:origin:xyz = (0.000002346933, 0.0012064725, 9.834766e-7)
+                asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_DrawerHandle_001.stl@
+                float3 urdf:geometry:mesh:scale = (1, 1, 1)
+                token visibility = "inherited"
+                matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0.000002346932888031006, 0.0012064725160598755, 9.834766387939453e-7, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Mesh "SM_drawer_03_handle_collision_1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+                prepend references = @./dlr_kitchen/meshes/usd/UCX_DrawerHandle_002.usda@</SM_UCX_DrawerHandle_002>
+            )
+            {
+                uniform token physics:approximation = "convexHull"
+                bool physics:collisionEnabled = 1
+                color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+                float[] primvars:displayOpacity = [1]
+                float3 urdf:collision:origin:rpy = (3.1415927, -1.5707964, 0)
+                point3f urdf:collision:origin:xyz = (0.0180117, 0.0012064725, 0.15946051)
+                asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_DrawerHandle_002.stl@
+                float3 urdf:geometry:mesh:scale = (1, 1, 1)
+                token visibility = "inherited"
+                matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0, 0.999999999999999, 0), (8.742278000372465e-8, -0.999999999999996, 3.8213712347318754e-15, 0), (0.9999999999999952, 8.742278000372473e-8, 4.371139006309477e-8, 0), (0.018011700361967087, 0.0012064725160598755, 0.15946051478385925, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Mesh "SM_drawer_03_handle_collision_2" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+                prepend references = @./dlr_kitchen/meshes/usd/UCX_DrawerHandle_003.usda@</SM_UCX_DrawerHandle_003>
+            )
+            {
+                uniform token physics:approximation = "convexHull"
+                bool physics:collisionEnabled = 1
+                color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+                float[] primvars:displayOpacity = [1]
+                float3 urdf:collision:origin:rpy = (3.1415927, -1.5707964, 0)
+                point3f urdf:collision:origin:xyz = (0.0180117, 0.0012064724, -0.15945649)
+                asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_DrawerHandle_003.stl@
+                float3 urdf:geometry:mesh:scale = (1, 1, 1)
+                token visibility = "inherited"
+                matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0, 0.999999999999999, 0), (8.742278000372465e-8, -0.999999999999996, 3.8213712347318754e-15, 0), (0.9999999999999952, 8.742278000372473e-8, 4.371139006309477e-8, 0), (0.018011700361967087, 0.0012064723996445537, -0.15945649147033691, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+        }
+    }
+
+    def Xform "oven_door" (
+        prepend apiSchemas = ["UrdfLinkAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI"]
+    )
+    {
+        point3f physics:centerOfMass = (-0.006090462, 0.010207861, 0.23177263)
+        float3 physics:diagonalInertia = (0.09859467, 0.24083796, 0.33928758)
+        bool physics:kinematicEnabled = 0
+        float physics:mass = 3.3539793
+        quatf physics:principalAxes = (-0.70710677, -3.090862e-8, 0.7071068, 3.0908623e-8)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.09859467
+        float urdf:link:inertial:inertia:iyy = 0.24083796
+        float urdf:link:inertial:inertia:izz = 0.33928758
+        float urdf:link:inertial:mass = 3.3539793
+        float3 urdf:link:inertial:origin:rpy = (2.337974, -1.5707963, -2.337974)
+        point3f urdf:link:inertial:origin:xyz = (-0.006090462, 0.010207861, 0.23177263)
+        matrix4d xformOp:transform = ( (-0.0000037391993661373135, 0.9999999999930093, 0, 0), (-0.9999999999930093, -0.0000037391993661373135, 0, 0), (0, 0, 1, 0), (2.460701164993894, 3.649840071743943, 0.3002089858055115, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+
+        def Mesh "SM_oven_door_collision_0" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_OvenDoor_001.usda@</SM_UCX_OvenDoor_001>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, 0, 0)
+            point3f urdf:collision:origin:xyz = (-0.006090462, 0.010207862, 0.23427261)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_OvenDoor_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, -4.371139006309477e-8, 0.999999999999999, 0), (0, -0.999999999999999, -4.371139006309477e-8, 0), (-0.0060904622077941895, 0.01020786166191101, 0.23427261412143707, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Xform "oven_door_handle" (
+            prepend apiSchemas = ["UrdfLinkAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI"]
+        )
+        {
+            point3f physics:centerOfMass = (-0.0016785798, 0.000032943914, -0.0061250348)
+            float3 physics:diagonalInertia = (0.000051665415, 0.0070423284, 0.007072341)
+            float physics:mass = 0.276021
+            quatf physics:principalAxes = (0.5964069, 0.37989983, 0.5964576, 0.37975428)
+            float urdf:link:inertial:inertia:ixx = 0.000051665415
+            float urdf:link:inertial:inertia:iyy = 0.0070423284
+            float urdf:link:inertial:inertia:izz = 0.007072341
+            float urdf:link:inertial:mass = 0.276021
+            float3 urdf:link:inertial:origin:rpy = (1.5709851, 0.4366715, 1.570741)
+            point3f urdf:link:inertial:origin:xyz = (-0.0016785798, 0.000032943914, -0.0061250348)
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, -0.0000037391993661373135, -0.9999999999930093, 0), (0, 0.9999999999930093, -0.0000037391993661373135, 0), (-0.046932999044656754, 0.015960000455379486, 0.4150789976119995, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+
+            def Mesh "SM_oven_door_handle_collision_0" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+                prepend references = @./dlr_kitchen/meshes/usd/UCX_OvenDoorHandle_001.usda@</SM_UCX_OvenDoorHandle_001>
+            )
+            {
+                uniform token physics:approximation = "convexHull"
+                bool physics:collisionEnabled = 1
+                color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+                float[] primvars:displayOpacity = [1]
+                float3 urdf:collision:origin:rpy = (1.5707964, -1.110223e-15, 2.0993721)
+                point3f urdf:collision:origin:xyz = (0.01523653, 0.00763711, 0.22170116)
+                asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_OvenDoorHandle_001.stl@
+                float3 urdf:geometry:mesh:scale = (1, 1, 1)
+                token visibility = "inherited"
+                matrix4d xformOp:transform = ( (-0.5043040378471768, 0.8635261648676507, 1.1657341758564144e-15, 0), (3.774592949312705e-8, 2.2043829428497475e-8, 0.999999999999999, 0), (0.8635261648676498, 0.5043040378471765, -4.3711389841050163e-8, 0), (0.01523653045296669, 0.007637110073119402, 0.22170116007328033, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Mesh "SM_oven_door_handle_collision_1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+                prepend references = @./dlr_kitchen/meshes/usd/UCX_OvenDoorHandle_002.usda@</SM_UCX_OvenDoorHandle_002>
+            )
+            {
+                uniform token physics:approximation = "convexHull"
+                bool physics:collisionEnabled = 1
+                color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+                float[] primvars:displayOpacity = [1]
+                float3 urdf:collision:origin:rpy = (1.5707964, -1.110223e-15, 2.0993721)
+                point3f urdf:collision:origin:xyz = (0.01523653, 0.00763711, -0.23288307)
+                asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_OvenDoorHandle_002.stl@
+                float3 urdf:geometry:mesh:scale = (1, 1, 1)
+                token visibility = "inherited"
+                matrix4d xformOp:transform = ( (-0.5043040378471768, 0.8635261648676507, 1.1657341758564144e-15, 0), (3.774592949312705e-8, 2.2043829428497475e-8, 0.999999999999999, 0), (0.8635261648676498, 0.5043040378471765, -4.3711389841050163e-8, 0), (0.01523653045296669, 0.007637110073119402, -0.23288306593894958, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Mesh "SM_oven_door_handle_collision_2" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+                prepend references = @./dlr_kitchen/meshes/usd/UCX_OvenDoorHandle_003.usda@</SM_UCX_OvenDoorHandle_003>
+            )
+            {
+                uniform token physics:approximation = "convexHull"
+                bool physics:collisionEnabled = 1
+                color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+                float[] primvars:displayOpacity = [1]
+                float3 urdf:collision:origin:rpy = (0, 0, 1.5707964)
+                point3f urdf:collision:origin:xyz = (-0.005733653, -0.0017900086, -0.005442649)
+                asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_OvenDoorHandle_003.stl@
+                float3 urdf:geometry:mesh:scale = (1, 1, 1)
+                token visibility = "inherited"
+                matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0.999999999999999, 0, 0), (-0.999999999999999, -4.371139006309477e-8, 0, 0), (0, 0, 1, 0), (-0.005733652971684933, -0.0017900086240842938, -0.0054426491260528564, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+        }
+    }
+
+    def Xform "oven_drawer" (
+        prepend apiSchemas = ["UrdfLinkAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI"]
+    )
+    {
+        point3f physics:centerOfMass = (0.07058255, -0.009504064, -0.06355084)
+        float3 physics:diagonalInertia = (0.24297307, 0.30771157, 0.49120617)
+        bool physics:kinematicEnabled = 0
+        float physics:mass = 5.9858694
+        quatf physics:principalAxes = (0.996713, -0.0011511198, -0.064003, 0.049653813)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.24297307
+        float urdf:link:inertial:inertia:iyy = 0.30771157
+        float urdf:link:inertial:inertia:izz = 0.49120617
+        float urdf:link:inertial:mass = 5.9858694
+        float3 urdf:link:inertial:origin:rpy = (-0.008721919, -0.12781869, 0.100111)
+        point3f urdf:link:inertial:origin:xyz = (0.07058255, -0.009504064, -0.06355084)
+        matrix4d xformOp:transform = ( (-0.0000037391993661373135, 0.9999999999930093, 0, 0), (-0.9999999999930093, -0.0000037391993661373135, 0, 0), (0, 0, 1, 0), (2.4487005362384675, 3.8178400395085585, 0.22920900583267212, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+
+        def Mesh "SM_oven_drawer_collision_0" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_OvenDrawer_001.usda@</SM_UCX_OvenDrawer_001>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (3.1415927, -1.5707964, 0)
+            point3f urdf:collision:origin:xyz = (0.11408047, -0.0019999892, -0.086386606)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_OvenDrawer_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0, 0.999999999999999, 0), (8.742278000372465e-8, -0.999999999999996, 3.8213712347318754e-15, 0), (0.9999999999999952, 8.742278000372473e-8, 4.371139006309477e-8, 0), (0.11408046633005142, -0.001999989151954651, -0.08638660609722137, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_oven_drawer_collision_1" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_OvenDrawer_002.usda@</SM_UCX_OvenDrawer_002>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, 0, 0)
+            point3f urdf:collision:origin:xyz = (-0.17442794, -0.0008446574, -0.042919833)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_OvenDrawer_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, -4.371139006309477e-8, 0.999999999999999, 0), (0, -0.999999999999999, -4.371139006309477e-8, 0), (-0.17442794144153595, -0.0008446574211120605, -0.0429198332130909, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_oven_drawer_collision_2" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_OvenDrawer_003.usda@</SM_UCX_OvenDrawer_003>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, 0, 0)
+            point3f urdf:collision:origin:xyz = (0.3939415, -0.00080162287, -0.019886844)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_OvenDrawer_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, -4.371139006309477e-8, 0.999999999999999, 0), (0, -0.999999999999999, -4.371139006309477e-8, 0), (0.3939414918422699, -0.0008016228675842285, -0.019886843860149384, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_oven_drawer_collision_3" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_OvenDrawer_004.usda@</SM_UCX_OvenDrawer_004>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (3.1415927, -1.5707964, 0)
+            point3f urdf:collision:origin:xyz = (0.110905446, -0.2778017, 0.03661313)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_OvenDrawer_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0, 0.999999999999999, 0), (8.742278000372465e-8, -0.999999999999996, 3.8213712347318754e-15, 0), (0.9999999999999952, 8.742278000372473e-8, 4.371139006309477e-8, 0), (0.11090544611215591, -0.2778016924858093, 0.03661312907934189, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_oven_drawer_collision_4" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_OvenDrawer_005.usda@</SM_UCX_OvenDrawer_005>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, -1.3322676e-15, 1.5707964)
+            point3f urdf:collision:origin:xyz = (0.110905446, 0.27419832, 0.03661313)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_OvenDrawer_005.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0.9999999999999989, 1.27675647831893e-15, 0), (4.371139000758362e-8, 6.661338147750939e-16, 0.9999999999999989, 0), (0.999999999999998, 4.371139000758362e-8, -4.371139006309477e-8, 0), (0.11090544611215591, 0.2741983234882355, 0.03661312907934189, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_oven_drawer_collision_5" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_OvenDrawer_006.usda@</SM_UCX_OvenDrawer_006>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, -0.07772115, 1.5707964)
+            point3f urdf:collision:origin:xyz = (0.11090545, -0.27502388, -0.051164474)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_OvenDrawer_006.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.357943561572597e-8, 0.9969812315710851, 0.07764292559532149, 0), (4.710527007345533e-8, -0.07764292559531949, 0.9969812315710851, 0), (0.999999999999998, 4.7105270295499935e-8, -4.3579435393681365e-8, 0), (0.11090545356273651, -0.275023877620697, -0.051164474338293076, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_oven_drawer_collision_6" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_OvenDrawer_007.usda@</SM_UCX_OvenDrawer_007>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, 0.07595011, 1.5707964)
+            point3f urdf:collision:origin:xyz = (0.11090546, 0.27292284, -0.052538224)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_OvenDrawer_007.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.3585377973442974e-8, 0.9971171766893112, -0.07587711085126436, 0), (4.039469608807522e-8, 0.07587711085126614, 0.9971171766893112, 0), (0.9999999999999982, 4.039469608807522e-8, -4.3585377973442974e-8, 0), (0.11090546101331711, 0.2729228436946869, -0.052538223564624786, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Xform "oven_drawer_handle" (
+            prepend apiSchemas = ["UrdfLinkAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI"]
+        )
+        {
+            point3f physics:centerOfMass = (0.0026534921, 0.0012064726, -0.000007335149)
+            float3 physics:diagonalInertia = (0.000008702245, 0.00096747087, 0.00096945825)
+            float physics:mass = 0.083983034
+            quatf physics:principalAxes = (-0.53304553, -0.464603, 0.5330521, 0.4646094)
+            float urdf:link:inertial:inertia:ixx = 0.000008702245
+            float urdf:link:inertial:inertia:iyy = 0.00096747087
+            float urdf:link:inertial:inertia:izz = 0.00096945825
+            float urdf:link:inertial:mass = 0.083983034
+            float3 urdf:link:inertial:origin:rpy = (1.5707973, -0.13699229, -1.5708094)
+            point3f urdf:link:inertial:origin:xyz = (0.0026534921, 0.0012064726, -0.000007335149)
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, -0.0000037391993661373135, -0.9999999999930093, 0), (0, 0.9999999999930093, -0.0000037391993661373135, 0), (-0.20993900299072266, 0.0011699999449774623, 0.025767000392079353, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+
+            def Mesh "SM_oven_drawer_handle_collision_0" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+                prepend references = @./dlr_kitchen/meshes/usd/UCX_DrawerHandle_001.usda@</SM_UCX_DrawerHandle_001>
+            )
+            {
+                uniform token physics:approximation = "convexHull"
+                bool physics:collisionEnabled = 1
+                color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+                float[] primvars:displayOpacity = [1]
+                float3 urdf:collision:origin:rpy = (0, 0, 0)
+                point3f urdf:collision:origin:xyz = (0.000002346933, 0.0012064725, 9.834766e-7)
+                asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_DrawerHandle_001.stl@
+                float3 urdf:geometry:mesh:scale = (1, 1, 1)
+                token visibility = "inherited"
+                matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0.000002346932888031006, 0.0012064725160598755, 9.834766387939453e-7, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Mesh "SM_oven_drawer_handle_collision_1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+                prepend references = @./dlr_kitchen/meshes/usd/UCX_DrawerHandle_002.usda@</SM_UCX_DrawerHandle_002>
+            )
+            {
+                uniform token physics:approximation = "convexHull"
+                bool physics:collisionEnabled = 1
+                color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+                float[] primvars:displayOpacity = [1]
+                float3 urdf:collision:origin:rpy = (3.1415927, -1.5707964, 0)
+                point3f urdf:collision:origin:xyz = (0.0180117, 0.0012064725, 0.15946051)
+                asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_DrawerHandle_002.stl@
+                float3 urdf:geometry:mesh:scale = (1, 1, 1)
+                token visibility = "inherited"
+                matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0, 0.999999999999999, 0), (8.742278000372465e-8, -0.999999999999996, 3.8213712347318754e-15, 0), (0.9999999999999952, 8.742278000372473e-8, 4.371139006309477e-8, 0), (0.018011700361967087, 0.0012064725160598755, 0.15946051478385925, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Mesh "SM_oven_drawer_handle_collision_2" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+                prepend references = @./dlr_kitchen/meshes/usd/UCX_DrawerHandle_003.usda@</SM_UCX_DrawerHandle_003>
+            )
+            {
+                uniform token physics:approximation = "convexHull"
+                bool physics:collisionEnabled = 1
+                color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+                float[] primvars:displayOpacity = [1]
+                float3 urdf:collision:origin:rpy = (3.1415927, -1.5707964, 0)
+                point3f urdf:collision:origin:xyz = (0.0180117, 0.0012064724, -0.15945649)
+                asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_DrawerHandle_003.stl@
+                float3 urdf:geometry:mesh:scale = (1, 1, 1)
+                token visibility = "inherited"
+                matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0, 0.999999999999999, 0), (8.742278000372465e-8, -0.999999999999996, 3.8213712347318754e-15, 0), (0.9999999999999952, 8.742278000372473e-8, 4.371139006309477e-8, 0), (0.018011700361967087, 0.0012064723996445537, -0.15945649147033691, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+        }
+    }
+
+    def Xform "drawer_04" (
+        prepend apiSchemas = ["UrdfLinkAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI"]
+    )
+    {
+        point3f physics:centerOfMass = (0.07188069, -0.00024757386, -0.0628738)
+        float3 physics:diagonalInertia = (0.25961867, 0.3152993, 0.51445603)
+        bool physics:kinematicEnabled = 0
+        float physics:mass = 6.1831446
+        quatf physics:principalAxes = (0.00015154743, 0.9979493, 0.00036479018, -0.06400771)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.25961867
+        float urdf:link:inertial:inertia:iyy = 0.3152993
+        float urdf:link:inertial:inertia:izz = 0.51445603
+        float urdf:link:inertial:mass = 6.1831446
+        float3 urdf:link:inertial:origin:rpy = (3.1413348, 0.12810309, 0.0007145388)
+        point3f urdf:link:inertial:origin:xyz = (0.07188069, -0.00024757386, -0.0628738)
+        matrix4d xformOp:transform = ( (-0.0000037391993661373135, 0.9999999999930093, 0, 0), (-0.9999999999930093, -0.0000037391993661373135, 0, 0), (0, 0, 1, 0), (3.0487005284111635, 3.817842283028149, 0.8292089886963367, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+
+        def Mesh "SM_drawer_04_collision_0" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_04_001.usda@</SM_UCX_Drawer_04_001>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (3.1415927, -1.5707964, 0)
+            point3f urdf:collision:origin:xyz = (0.11408047, 1.4901161e-8, -0.08638661)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_04_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0, 0.999999999999999, 0), (8.742278000372465e-8, -0.999999999999996, 3.8213712347318754e-15, 0), (0.9999999999999952, 8.742278000372473e-8, 4.371139006309477e-8, 0), (0.11408046633005142, 1.4901161193847656e-8, -0.08638661354780197, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_drawer_04_collision_1" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_04_002.usda@</SM_UCX_Drawer_04_002>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, 0, 0)
+            point3f urdf:collision:origin:xyz = (-0.17442794, -0.0008446574, -0.037919834)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_04_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, -4.371139006309477e-8, 0.999999999999999, 0), (0, -0.999999999999999, -4.371139006309477e-8, 0), (-0.17442794144153595, -0.0008446574211120605, -0.03791983425617218, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_drawer_04_collision_2" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_04_003.usda@</SM_UCX_Drawer_04_003>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, 0, 0)
+            point3f urdf:collision:origin:xyz = (0.3939415, -0.00080162287, -0.019886844)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_04_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, -4.371139006309477e-8, 0.999999999999999, 0), (0, -0.999999999999999, -4.371139006309477e-8, 0), (0.3939414918422699, -0.0008016228675842285, -0.019886843860149384, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_drawer_04_collision_3" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_04_004.usda@</SM_UCX_Drawer_04_004>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (3.1415927, -1.5707964, 0)
+            point3f urdf:collision:origin:xyz = (0.110905446, -0.2778017, 0.03661313)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_04_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0, 0.999999999999999, 0), (8.742278000372465e-8, -0.999999999999996, 3.8213712347318754e-15, 0), (0.9999999999999952, 8.742278000372473e-8, 4.371139006309477e-8, 0), (0.11090544611215591, -0.2778016924858093, 0.03661312907934189, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_drawer_04_collision_4" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_04_005.usda@</SM_UCX_Drawer_04_005>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (3.1415927, -1.5707964, 0)
+            point3f urdf:collision:origin:xyz = (0.110905446, 0.27619833, 0.03661313)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_04_005.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0, 0.999999999999999, 0), (8.742278000372465e-8, -0.999999999999996, 3.8213712347318754e-15, 0), (0.9999999999999952, 8.742278000372473e-8, 4.371139006309477e-8, 0), (0.11090544611215591, 0.2761983275413513, 0.03661312907934189, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_drawer_04_collision_5" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_04_006.usda@</SM_UCX_Drawer_04_006>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, -0.07772115, 1.5707964)
+            point3f urdf:collision:origin:xyz = (0.11090545, -0.27502388, -0.051164474)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_04_006.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.357943561572597e-8, 0.9969812315710851, 0.07764292559532149, 0), (4.710527007345533e-8, -0.07764292559531949, 0.9969812315710851, 0), (0.999999999999998, 4.7105270295499935e-8, -4.3579435393681365e-8, 0), (0.11090545356273651, -0.275023877620697, -0.051164474338293076, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_drawer_04_collision_6" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_04_007.usda@</SM_UCX_Drawer_04_007>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, 0.07772115, 1.5707964)
+            point3f urdf:collision:origin:xyz = (0.11090545, 0.27502388, -0.051164474)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_04_007.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.3579435393681365e-8, 0.9969812315710851, -0.07764292559532149, 0), (4.03175097196673e-8, 0.07764292559532326, 0.9969812315710851, 0), (0.9999999999999982, 4.03175098306896e-8, -4.3579435393681365e-8, 0), (0.11090545356273651, 0.275023877620697, -0.051164474338293076, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Xform "drawer_04_handle" (
+            prepend apiSchemas = ["UrdfLinkAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI"]
+        )
+        {
+            point3f physics:centerOfMass = (0.0026534921, 0.0012064726, -0.000007335149)
+            float3 physics:diagonalInertia = (0.000008702245, 0.00096747087, 0.00096945825)
+            float physics:mass = 0.083983034
+            quatf physics:principalAxes = (-0.53304553, -0.464603, 0.5330521, 0.4646094)
+            float urdf:link:inertial:inertia:ixx = 0.000008702245
+            float urdf:link:inertial:inertia:iyy = 0.00096747087
+            float urdf:link:inertial:inertia:izz = 0.00096945825
+            float urdf:link:inertial:mass = 0.083983034
+            float3 urdf:link:inertial:origin:rpy = (1.5707973, -0.13699229, -1.5708094)
+            point3f urdf:link:inertial:origin:xyz = (0.0026534921, 0.0012064726, -0.000007335149)
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, -0.0000037391993661373135, -0.9999999999930093, 0), (0, 0.9999999999930093, -0.0000037391993661373135, 0), (-0.20993900299072266, 0.0011699999449774623, 0.025767000392079353, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+
+            def Mesh "SM_drawer_04_handle_collision_0" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+                prepend references = @./dlr_kitchen/meshes/usd/UCX_DrawerHandle_001.usda@</SM_UCX_DrawerHandle_001>
+            )
+            {
+                uniform token physics:approximation = "convexHull"
+                bool physics:collisionEnabled = 1
+                color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+                float[] primvars:displayOpacity = [1]
+                float3 urdf:collision:origin:rpy = (0, 0, 0)
+                point3f urdf:collision:origin:xyz = (0.000002346933, 0.0012064725, 9.834766e-7)
+                asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_DrawerHandle_001.stl@
+                float3 urdf:geometry:mesh:scale = (1, 1, 1)
+                token visibility = "inherited"
+                matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0.000002346932888031006, 0.0012064725160598755, 9.834766387939453e-7, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Mesh "SM_drawer_04_handle_collision_1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+                prepend references = @./dlr_kitchen/meshes/usd/UCX_DrawerHandle_002.usda@</SM_UCX_DrawerHandle_002>
+            )
+            {
+                uniform token physics:approximation = "convexHull"
+                bool physics:collisionEnabled = 1
+                color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+                float[] primvars:displayOpacity = [1]
+                float3 urdf:collision:origin:rpy = (3.1415927, -1.5707964, 0)
+                point3f urdf:collision:origin:xyz = (0.0180117, 0.0012064725, 0.15946051)
+                asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_DrawerHandle_002.stl@
+                float3 urdf:geometry:mesh:scale = (1, 1, 1)
+                token visibility = "inherited"
+                matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0, 0.999999999999999, 0), (8.742278000372465e-8, -0.999999999999996, 3.8213712347318754e-15, 0), (0.9999999999999952, 8.742278000372473e-8, 4.371139006309477e-8, 0), (0.018011700361967087, 0.0012064725160598755, 0.15946051478385925, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Mesh "SM_drawer_04_handle_collision_2" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+                prepend references = @./dlr_kitchen/meshes/usd/UCX_DrawerHandle_003.usda@</SM_UCX_DrawerHandle_003>
+            )
+            {
+                uniform token physics:approximation = "convexHull"
+                bool physics:collisionEnabled = 1
+                color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+                float[] primvars:displayOpacity = [1]
+                float3 urdf:collision:origin:rpy = (3.1415927, -1.5707964, 0)
+                point3f urdf:collision:origin:xyz = (0.0180117, 0.0012064724, -0.15945649)
+                asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_DrawerHandle_003.stl@
+                float3 urdf:geometry:mesh:scale = (1, 1, 1)
+                token visibility = "inherited"
+                matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0, 0.999999999999999, 0), (8.742278000372465e-8, -0.999999999999996, 3.8213712347318754e-15, 0), (0.9999999999999952, 8.742278000372473e-8, 4.371139006309477e-8, 0), (0.018011700361967087, 0.0012064723996445537, -0.15945649147033691, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+        }
+    }
+
+    def Xform "drawer_05" (
+        prepend apiSchemas = ["UrdfLinkAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI"]
+    )
+    {
+        point3f physics:centerOfMass = (0.07188069, -0.00024757386, -0.0628738)
+        float3 physics:diagonalInertia = (0.25961867, 0.3152993, 0.51445603)
+        bool physics:kinematicEnabled = 0
+        float physics:mass = 6.1831446
+        quatf physics:principalAxes = (0.00015154743, 0.9979493, 0.00036479018, -0.06400771)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.25961867
+        float urdf:link:inertial:inertia:iyy = 0.3152993
+        float urdf:link:inertial:inertia:izz = 0.51445603
+        float urdf:link:inertial:mass = 6.1831446
+        float3 urdf:link:inertial:origin:rpy = (3.1413348, 0.12810309, 0.0007145388)
+        point3f urdf:link:inertial:origin:xyz = (0.07188069, -0.00024757386, -0.0628738)
+        matrix4d xformOp:transform = ( (-0.0000037391993661373135, 0.9999999999930093, 0, 0), (-0.9999999999930093, -0.0000037391993661373135, 0, 0), (0, 0, 1, 0), (3.0487005284111635, 3.817842283028149, 0.6292089819908142, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+
+        def Mesh "SM_drawer_05_collision_0" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_05_001.usda@</SM_UCX_Drawer_05_001>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (3.1415927, -1.5707964, 0)
+            point3f urdf:collision:origin:xyz = (0.11408047, 1.4901161e-8, -0.08638661)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_05_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0, 0.999999999999999, 0), (8.742278000372465e-8, -0.999999999999996, 3.8213712347318754e-15, 0), (0.9999999999999952, 8.742278000372473e-8, 4.371139006309477e-8, 0), (0.11408046633005142, 1.4901161193847656e-8, -0.08638661354780197, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_drawer_05_collision_1" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_05_002.usda@</SM_UCX_Drawer_05_002>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, 0, 0)
+            point3f urdf:collision:origin:xyz = (-0.17442794, -0.0008446574, -0.037919834)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_05_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, -4.371139006309477e-8, 0.999999999999999, 0), (0, -0.999999999999999, -4.371139006309477e-8, 0), (-0.17442794144153595, -0.0008446574211120605, -0.03791983425617218, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_drawer_05_collision_2" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_05_003.usda@</SM_UCX_Drawer_05_003>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, 0, 0)
+            point3f urdf:collision:origin:xyz = (0.3939415, -0.00080162287, -0.019886844)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_05_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, -4.371139006309477e-8, 0.999999999999999, 0), (0, -0.999999999999999, -4.371139006309477e-8, 0), (0.3939414918422699, -0.0008016228675842285, -0.019886843860149384, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_drawer_05_collision_3" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_05_004.usda@</SM_UCX_Drawer_05_004>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (3.1415927, -1.5707964, 0)
+            point3f urdf:collision:origin:xyz = (0.110905446, -0.2778017, 0.03661313)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_05_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0, 0.999999999999999, 0), (8.742278000372465e-8, -0.999999999999996, 3.8213712347318754e-15, 0), (0.9999999999999952, 8.742278000372473e-8, 4.371139006309477e-8, 0), (0.11090544611215591, -0.2778016924858093, 0.03661312907934189, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_drawer_05_collision_4" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_05_005.usda@</SM_UCX_Drawer_05_005>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (3.1415927, -1.5707964, 0)
+            point3f urdf:collision:origin:xyz = (0.110905446, 0.27619833, 0.03661313)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_05_005.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0, 0.999999999999999, 0), (8.742278000372465e-8, -0.999999999999996, 3.8213712347318754e-15, 0), (0.9999999999999952, 8.742278000372473e-8, 4.371139006309477e-8, 0), (0.11090544611215591, 0.2761983275413513, 0.03661312907934189, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_drawer_05_collision_5" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_05_006.usda@</SM_UCX_Drawer_05_006>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, -0.07772115, 1.5707964)
+            point3f urdf:collision:origin:xyz = (0.11090545, -0.27502388, -0.051164474)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_05_006.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.357943561572597e-8, 0.9969812315710851, 0.07764292559532149, 0), (4.710527007345533e-8, -0.07764292559531949, 0.9969812315710851, 0), (0.999999999999998, 4.7105270295499935e-8, -4.3579435393681365e-8, 0), (0.11090545356273651, -0.275023877620697, -0.051164474338293076, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_drawer_05_collision_6" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_05_007.usda@</SM_UCX_Drawer_05_007>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, 0.07772115, 1.5707964)
+            point3f urdf:collision:origin:xyz = (0.11090545, 0.27502388, -0.051164474)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_05_007.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.3579435393681365e-8, 0.9969812315710851, -0.07764292559532149, 0), (4.03175097196673e-8, 0.07764292559532326, 0.9969812315710851, 0), (0.9999999999999982, 4.03175098306896e-8, -4.3579435393681365e-8, 0), (0.11090545356273651, 0.275023877620697, -0.051164474338293076, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Xform "drawer_05_handle" (
+            prepend apiSchemas = ["UrdfLinkAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI"]
+        )
+        {
+            point3f physics:centerOfMass = (0.0026534921, 0.0012064726, -0.000007335149)
+            float3 physics:diagonalInertia = (0.000008702245, 0.00096747087, 0.00096945825)
+            float physics:mass = 0.083983034
+            quatf physics:principalAxes = (-0.53304553, -0.464603, 0.5330521, 0.4646094)
+            float urdf:link:inertial:inertia:ixx = 0.000008702245
+            float urdf:link:inertial:inertia:iyy = 0.00096747087
+            float urdf:link:inertial:inertia:izz = 0.00096945825
+            float urdf:link:inertial:mass = 0.083983034
+            float3 urdf:link:inertial:origin:rpy = (1.5707973, -0.13699229, -1.5708094)
+            point3f urdf:link:inertial:origin:xyz = (0.0026534921, 0.0012064726, -0.000007335149)
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, -0.0000037391993661373135, -0.9999999999930093, 0), (0, 0.9999999999930093, -0.0000037391993661373135, 0), (-0.20993900299072266, 0.0011699999449774623, 0.025767000392079353, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+
+            def Mesh "SM_drawer_05_handle_collision_0" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+                prepend references = @./dlr_kitchen/meshes/usd/UCX_DrawerHandle_001.usda@</SM_UCX_DrawerHandle_001>
+            )
+            {
+                uniform token physics:approximation = "convexHull"
+                bool physics:collisionEnabled = 1
+                color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+                float[] primvars:displayOpacity = [1]
+                float3 urdf:collision:origin:rpy = (0, 0, 0)
+                point3f urdf:collision:origin:xyz = (0.000002346933, 0.0012064725, 9.834766e-7)
+                asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_DrawerHandle_001.stl@
+                float3 urdf:geometry:mesh:scale = (1, 1, 1)
+                token visibility = "inherited"
+                matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0.000002346932888031006, 0.0012064725160598755, 9.834766387939453e-7, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Mesh "SM_drawer_05_handle_collision_1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+                prepend references = @./dlr_kitchen/meshes/usd/UCX_DrawerHandle_002.usda@</SM_UCX_DrawerHandle_002>
+            )
+            {
+                uniform token physics:approximation = "convexHull"
+                bool physics:collisionEnabled = 1
+                color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+                float[] primvars:displayOpacity = [1]
+                float3 urdf:collision:origin:rpy = (3.1415927, -1.5707964, 0)
+                point3f urdf:collision:origin:xyz = (0.0180117, 0.0012064725, 0.15946051)
+                asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_DrawerHandle_002.stl@
+                float3 urdf:geometry:mesh:scale = (1, 1, 1)
+                token visibility = "inherited"
+                matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0, 0.999999999999999, 0), (8.742278000372465e-8, -0.999999999999996, 3.8213712347318754e-15, 0), (0.9999999999999952, 8.742278000372473e-8, 4.371139006309477e-8, 0), (0.018011700361967087, 0.0012064725160598755, 0.15946051478385925, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Mesh "SM_drawer_05_handle_collision_2" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+                prepend references = @./dlr_kitchen/meshes/usd/UCX_DrawerHandle_003.usda@</SM_UCX_DrawerHandle_003>
+            )
+            {
+                uniform token physics:approximation = "convexHull"
+                bool physics:collisionEnabled = 1
+                color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+                float[] primvars:displayOpacity = [1]
+                float3 urdf:collision:origin:rpy = (3.1415927, -1.5707964, 0)
+                point3f urdf:collision:origin:xyz = (0.0180117, 0.0012064724, -0.15945649)
+                asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_DrawerHandle_003.stl@
+                float3 urdf:geometry:mesh:scale = (1, 1, 1)
+                token visibility = "inherited"
+                matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0, 0.999999999999999, 0), (8.742278000372465e-8, -0.999999999999996, 3.8213712347318754e-15, 0), (0.9999999999999952, 8.742278000372473e-8, 4.371139006309477e-8, 0), (0.018011700361967087, 0.0012064723996445537, -0.15945649147033691, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+        }
+    }
+
+    def Xform "drawer_06" (
+        prepend apiSchemas = ["UrdfLinkAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI"]
+    )
+    {
+        point3f physics:centerOfMass = (-0.009161649, -0.00032812098, -0.07310583)
+        float3 physics:diagonalInertia = (0.38564655, 0.4764746, 0.6430068)
+        bool physics:kinematicEnabled = 0
+        float physics:mass = 7.7570677
+        quatf physics:principalAxes = (0.00045899992, 0.99140584, 0.0021758925, -0.13080314)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.38564655
+        float urdf:link:inertial:inertia:iyy = 0.4764746
+        float urdf:link:inertial:inertia:izz = 0.6430068
+        float urdf:link:inertial:mass = 7.7570677
+        float3 urdf:link:inertial:origin:rpy = (3.1412396, 0.26235947, 0.004342933)
+        point3f urdf:link:inertial:origin:xyz = (-0.009161649, -0.00032812098, -0.07310583)
+        matrix4d xformOp:transform = ( (-0.0000037391993661373135, 0.9999999999930093, 0, 0), (-0.9999999999930093, -0.0000037391993661373135, 0, 0), (0, 0, 1, 0), (3.0487003377119994, 3.868842282074118, 0.26420897245407104, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+
+        def Mesh "SM_drawer_06_collision_0" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_06_001.usda@</SM_UCX_Drawer_06_001>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, 0.07772117, 1.5707964)
+            point3f urdf:collision:origin:xyz = (0.060115878, 0.27502388, -0.113864854)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_06_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.3579435393681365e-8, 0.9969812298356301, -0.07764294787958859, 0), (4.031750888700003e-8, 0.07764294787959036, 0.9969812298356301, 0), (0.9999999999999982, 4.031750888700003e-8, -4.3579435393681365e-8, 0), (0.06011587753891945, 0.275023877620697, -0.11386485397815704, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_drawer_06_collision_1" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_06_002.usda@</SM_UCX_Drawer_06_002>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, -0.07772118, 1.5707964)
+            point3f urdf:collision:origin:xyz = (0.060115878, -0.27502388, -0.113864854)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_06_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.357943561572597e-8, 0.9969812292571452, 0.07764295530767751, 0), (4.7105271627767564e-8, -0.07764295530767562, 0.9969812292571452, 0), (0.9999999999999981, 4.7105271627767564e-8, -4.357943561572597e-8, 0), (0.06011587753891945, -0.275023877620697, -0.11386485397815704, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_drawer_06_collision_2" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_06_003.usda@</SM_UCX_Drawer_06_003>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (3.1415927, -1.5707964, 0)
+            point3f urdf:collision:origin:xyz = (0.06011587, 0.27619833, 0.04391294)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_06_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0, 0.999999999999999, 0), (8.742278000372465e-8, -0.999999999999996, 3.8213712347318754e-15, 0), (0.9999999999999952, 8.742278000372473e-8, 4.371139006309477e-8, 0), (0.06011587008833885, 0.2761983275413513, 0.043912939727306366, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_drawer_06_collision_3" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_06_004.usda@</SM_UCX_Drawer_06_004>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, -1.3322676e-15, 1.5707964)
+            point3f urdf:collision:origin:xyz = (0.06011587, -0.2778017, 0.043912943)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_06_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0.9999999999999989, 1.27675647831893e-15, 0), (4.371139000758362e-8, 6.661338147750939e-16, 0.9999999999999989, 0), (0.999999999999998, 4.371139000758362e-8, -4.371139006309477e-8, 0), (0.06011587008833885, -0.2778016924858093, 0.043912943452596664, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_drawer_06_collision_4" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_06_005.usda@</SM_UCX_Drawer_06_005>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, 0, 0)
+            point3f urdf:collision:origin:xyz = (0.34315193, -0.00036489964, -0.047587022)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_06_005.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, -4.371139006309477e-8, 0.999999999999999, 0), (0, -0.999999999999999, -4.371139006309477e-8, 0), (0.34315192699432373, -0.0003648996353149414, -0.04758702218532562, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_drawer_06_collision_5" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_06_006.usda@</SM_UCX_Drawer_06_006>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, 0, 0)
+            point3f urdf:collision:origin:xyz = (-0.22521752, -0.0008446574, 0.026221953)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_06_006.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, -4.371139006309477e-8, 0.999999999999999, 0), (0, -0.999999999999999, -4.371139006309477e-8, 0), (-0.2252175211906433, -0.0008446574211120605, 0.026221953332424164, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_drawer_06_collision_6" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_06_007.usda@</SM_UCX_Drawer_06_007>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (3.1415927, -1.5707964, 0)
+            point3f urdf:collision:origin:xyz = (0.06329089, 1.4901161e-8, -0.14908701)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_06_007.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0, 0.999999999999999, 0), (8.742278000372465e-8, -0.999999999999996, 3.8213712347318754e-15, 0), (0.9999999999999952, 8.742278000372473e-8, 4.371139006309477e-8, 0), (0.06329088658094406, 1.4901161193847656e-8, -0.14908701181411743, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Xform "drawer_06_handle" (
+            prepend apiSchemas = ["UrdfLinkAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI"]
+        )
+        {
+            point3f physics:centerOfMass = (0.0026534921, 0.0012064726, -0.000007335149)
+            float3 physics:diagonalInertia = (0.000008702245, 0.00096747087, 0.00096945825)
+            float physics:mass = 0.083983034
+            quatf physics:principalAxes = (-0.53304553, -0.464603, 0.5330521, 0.4646094)
+            float urdf:link:inertial:inertia:ixx = 0.000008702245
+            float urdf:link:inertial:inertia:iyy = 0.00096747087
+            float urdf:link:inertial:inertia:izz = 0.00096945825
+            float urdf:link:inertial:mass = 0.083983034
+            float3 urdf:link:inertial:origin:rpy = (1.5707973, -0.13699229, -1.5708094)
+            point3f urdf:link:inertial:origin:xyz = (0.0026534921, 0.0012064726, -0.000007335149)
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, -0.0000037391993661373135, -0.9999999999930093, 0), (0, 0.9999999999930093, -0.0000037391993661373135, 0), (-0.26072901487350464, 0.0004400000034365803, 0.1899079978466034, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+
+            def Mesh "SM_drawer_06_handle_collision_0" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+                prepend references = @./dlr_kitchen/meshes/usd/UCX_DrawerHandle_001.usda@</SM_UCX_DrawerHandle_001>
+            )
+            {
+                uniform token physics:approximation = "convexHull"
+                bool physics:collisionEnabled = 1
+                color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+                float[] primvars:displayOpacity = [1]
+                float3 urdf:collision:origin:rpy = (0, 0, 0)
+                point3f urdf:collision:origin:xyz = (0.000002346933, 0.0012064725, 9.834766e-7)
+                asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_DrawerHandle_001.stl@
+                float3 urdf:geometry:mesh:scale = (1, 1, 1)
+                token visibility = "inherited"
+                matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0.000002346932888031006, 0.0012064725160598755, 9.834766387939453e-7, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Mesh "SM_drawer_06_handle_collision_1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+                prepend references = @./dlr_kitchen/meshes/usd/UCX_DrawerHandle_002.usda@</SM_UCX_DrawerHandle_002>
+            )
+            {
+                uniform token physics:approximation = "convexHull"
+                bool physics:collisionEnabled = 1
+                color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+                float[] primvars:displayOpacity = [1]
+                float3 urdf:collision:origin:rpy = (3.1415927, -1.5707964, 0)
+                point3f urdf:collision:origin:xyz = (0.0180117, 0.0012064725, 0.15946051)
+                asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_DrawerHandle_002.stl@
+                float3 urdf:geometry:mesh:scale = (1, 1, 1)
+                token visibility = "inherited"
+                matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0, 0.999999999999999, 0), (8.742278000372465e-8, -0.999999999999996, 3.8213712347318754e-15, 0), (0.9999999999999952, 8.742278000372473e-8, 4.371139006309477e-8, 0), (0.018011700361967087, 0.0012064725160598755, 0.15946051478385925, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Mesh "SM_drawer_06_handle_collision_2" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+                prepend references = @./dlr_kitchen/meshes/usd/UCX_DrawerHandle_003.usda@</SM_UCX_DrawerHandle_003>
+            )
+            {
+                uniform token physics:approximation = "convexHull"
+                bool physics:collisionEnabled = 1
+                color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+                float[] primvars:displayOpacity = [1]
+                float3 urdf:collision:origin:rpy = (3.1415927, -1.5707964, 0)
+                point3f urdf:collision:origin:xyz = (0.0180117, 0.0012064724, -0.15945649)
+                asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_DrawerHandle_003.stl@
+                float3 urdf:geometry:mesh:scale = (1, 1, 1)
+                token visibility = "inherited"
+                matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0, 0.999999999999999, 0), (8.742278000372465e-8, -0.999999999999996, 3.8213712347318754e-15, 0), (0.9999999999999952, 8.742278000372473e-8, 4.371139006309477e-8, 0), (0.018011700361967087, 0.0012064723996445537, -0.15945649147033691, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+        }
+    }
+
+    def Xform "drawer_01" (
+        prepend apiSchemas = ["UrdfLinkAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI"]
+    )
+    {
+        point3f physics:centerOfMass = (0.07188069, -0.00024757386, -0.0628738)
+        float3 physics:diagonalInertia = (0.25961867, 0.3152993, 0.51445603)
+        bool physics:kinematicEnabled = 0
+        float physics:mass = 6.1831446
+        quatf physics:principalAxes = (0.00015154743, 0.9979493, 0.00036479018, -0.06400771)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.25961867
+        float urdf:link:inertial:inertia:iyy = 0.3152993
+        float urdf:link:inertial:inertia:izz = 0.51445603
+        float urdf:link:inertial:mass = 6.1831446
+        float3 urdf:link:inertial:origin:rpy = (3.1413348, 0.12810309, 0.0007145388)
+        point3f urdf:link:inertial:origin:xyz = (0.07188069, -0.00024757386, -0.0628738)
+        matrix4d xformOp:transform = ( (-0.0000037391993661373135, 0.9999999999930093, 0, 0), (-0.9999999999930093, -0.0000037391993661373135, 0, 0), (0, 0, 1, 0), (1.8487005403404815, 3.8178377959889542, 0.8292089886963367, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+
+        def Mesh "SM_drawer_01_collision_0" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_01_001.usda@</SM_UCX_Drawer_01_001>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (3.1415927, -1.5707964, 0)
+            point3f urdf:collision:origin:xyz = (0.11408047, 1.4901161e-8, -0.08638661)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_01_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0, 0.999999999999999, 0), (8.742278000372465e-8, -0.999999999999996, 3.8213712347318754e-15, 0), (0.9999999999999952, 8.742278000372473e-8, 4.371139006309477e-8, 0), (0.11408046633005142, 1.4901161193847656e-8, -0.08638661354780197, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_drawer_01_collision_1" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_01_002.usda@</SM_UCX_Drawer_01_002>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, 0, 0)
+            point3f urdf:collision:origin:xyz = (-0.17442794, -0.0008446574, -0.037919834)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_01_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, -4.371139006309477e-8, 0.999999999999999, 0), (0, -0.999999999999999, -4.371139006309477e-8, 0), (-0.17442794144153595, -0.0008446574211120605, -0.03791983425617218, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_drawer_01_collision_2" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_01_003.usda@</SM_UCX_Drawer_01_003>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, 0, 0)
+            point3f urdf:collision:origin:xyz = (0.3939415, -0.00080162287, -0.019886844)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_01_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, -4.371139006309477e-8, 0.999999999999999, 0), (0, -0.999999999999999, -4.371139006309477e-8, 0), (0.3939414918422699, -0.0008016228675842285, -0.019886843860149384, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_drawer_01_collision_3" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_01_004.usda@</SM_UCX_Drawer_01_004>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (3.1415927, -1.5707964, 0)
+            point3f urdf:collision:origin:xyz = (0.110905446, -0.2778017, 0.03661313)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_01_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0, 0.999999999999999, 0), (8.742278000372465e-8, -0.999999999999996, 3.8213712347318754e-15, 0), (0.9999999999999952, 8.742278000372473e-8, 4.371139006309477e-8, 0), (0.11090544611215591, -0.2778016924858093, 0.03661312907934189, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_drawer_01_collision_4" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_01_005.usda@</SM_UCX_Drawer_01_005>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (3.1415927, -1.5707964, 0)
+            point3f urdf:collision:origin:xyz = (0.110905446, 0.27619833, 0.03661313)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_01_005.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0, 0.999999999999999, 0), (8.742278000372465e-8, -0.999999999999996, 3.8213712347318754e-15, 0), (0.9999999999999952, 8.742278000372473e-8, 4.371139006309477e-8, 0), (0.11090544611215591, 0.2761983275413513, 0.03661312907934189, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_drawer_01_collision_5" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_01_006.usda@</SM_UCX_Drawer_01_006>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, -0.07772115, 1.5707964)
+            point3f urdf:collision:origin:xyz = (0.11090545, -0.27502388, -0.051164474)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_01_006.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.357943561572597e-8, 0.9969812315710851, 0.07764292559532149, 0), (4.710527007345533e-8, -0.07764292559531949, 0.9969812315710851, 0), (0.999999999999998, 4.7105270295499935e-8, -4.3579435393681365e-8, 0), (0.11090545356273651, -0.275023877620697, -0.051164474338293076, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_drawer_01_collision_6" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Drawer_01_007.usda@</SM_UCX_Drawer_01_007>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (1.5707964, 0.07772115, 1.5707964)
+            point3f urdf:collision:origin:xyz = (0.11090545, 0.27502388, -0.051164474)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Drawer_01_007.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.3579435393681365e-8, 0.9969812315710851, -0.07764292559532149, 0), (4.03175097196673e-8, 0.07764292559532326, 0.9969812315710851, 0), (0.9999999999999982, 4.03175098306896e-8, -4.3579435393681365e-8, 0), (0.11090545356273651, 0.275023877620697, -0.051164474338293076, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Xform "drawer_01_handle" (
+            prepend apiSchemas = ["UrdfLinkAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI"]
+        )
+        {
+            point3f physics:centerOfMass = (0.0026534921, 0.0012064726, -0.000007335149)
+            float3 physics:diagonalInertia = (0.000008702245, 0.00096747087, 0.00096945825)
+            float physics:mass = 0.083983034
+            quatf physics:principalAxes = (-0.53304553, -0.464603, 0.5330521, 0.4646094)
+            float urdf:link:inertial:inertia:ixx = 0.000008702245
+            float urdf:link:inertial:inertia:iyy = 0.00096747087
+            float urdf:link:inertial:inertia:izz = 0.00096945825
+            float urdf:link:inertial:mass = 0.083983034
+            float3 urdf:link:inertial:origin:rpy = (1.5707973, -0.13699229, -1.5708094)
+            point3f urdf:link:inertial:origin:xyz = (0.0026534921, 0.0012064726, -0.000007335149)
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, -0.0000037391993661373135, -0.9999999999930093, 0), (0, 0.9999999999930093, -0.0000037391993661373135, 0), (-0.20993900299072266, 0.0011699999449774623, 0.025767000392079353, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+
+            def Mesh "SM_drawer_01_handle_collision_0" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+                prepend references = @./dlr_kitchen/meshes/usd/UCX_DrawerHandle_001.usda@</SM_UCX_DrawerHandle_001>
+            )
+            {
+                uniform token physics:approximation = "convexHull"
+                bool physics:collisionEnabled = 1
+                color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+                float[] primvars:displayOpacity = [1]
+                float3 urdf:collision:origin:rpy = (0, 0, 0)
+                point3f urdf:collision:origin:xyz = (0.000002346933, 0.0012064725, 9.834766e-7)
+                asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_DrawerHandle_001.stl@
+                float3 urdf:geometry:mesh:scale = (1, 1, 1)
+                token visibility = "inherited"
+                matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0.000002346932888031006, 0.0012064725160598755, 9.834766387939453e-7, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Mesh "SM_drawer_01_handle_collision_1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+                prepend references = @./dlr_kitchen/meshes/usd/UCX_DrawerHandle_002.usda@</SM_UCX_DrawerHandle_002>
+            )
+            {
+                uniform token physics:approximation = "convexHull"
+                bool physics:collisionEnabled = 1
+                color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+                float[] primvars:displayOpacity = [1]
+                float3 urdf:collision:origin:rpy = (3.1415927, -1.5707964, 0)
+                point3f urdf:collision:origin:xyz = (0.0180117, 0.0012064725, 0.15946051)
+                asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_DrawerHandle_002.stl@
+                float3 urdf:geometry:mesh:scale = (1, 1, 1)
+                token visibility = "inherited"
+                matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0, 0.999999999999999, 0), (8.742278000372465e-8, -0.999999999999996, 3.8213712347318754e-15, 0), (0.9999999999999952, 8.742278000372473e-8, 4.371139006309477e-8, 0), (0.018011700361967087, 0.0012064725160598755, 0.15946051478385925, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Mesh "SM_drawer_01_handle_collision_2" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+                prepend references = @./dlr_kitchen/meshes/usd/UCX_DrawerHandle_003.usda@</SM_UCX_DrawerHandle_003>
+            )
+            {
+                uniform token physics:approximation = "convexHull"
+                bool physics:collisionEnabled = 1
+                color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+                float[] primvars:displayOpacity = [1]
+                float3 urdf:collision:origin:rpy = (3.1415927, -1.5707964, 0)
+                point3f urdf:collision:origin:xyz = (0.0180117, 0.0012064724, -0.15945649)
+                asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_DrawerHandle_003.stl@
+                float3 urdf:geometry:mesh:scale = (1, 1, 1)
+                token visibility = "inherited"
+                matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0, 0.999999999999999, 0), (8.742278000372465e-8, -0.999999999999996, 3.8213712347318754e-15, 0), (0.9999999999999952, 8.742278000372473e-8, 4.371139006309477e-8, 0), (0.018011700361967087, 0.0012064723996445537, -0.15945649147033691, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+        }
+    }
+
+    def Xform "fridge" (
+        delete apiSchemas = ["PhysicsRigidBodyAPI", "PhysxRigidBodyAPI"]
+        prepend apiSchemas = ["UrdfLinkAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI"]
+    )
+    {
+        point3f physics:centerOfMass = (0, 0, 0)
+        float3 physics:diagonalInertia = (0, 0, 0)
+        float physics:mass = 0
+        quatf physics:principalAxes = (1, 0, 0, 0)
+        float urdf:link:inertial:inertia:ixx = 0
+        float urdf:link:inertial:inertia:iyy = 0
+        float urdf:link:inertial:inertia:izz = 0
+        float urdf:link:inertial:mass = 0
+        float3 urdf:link:inertial:origin:rpy = (0, 0, 0)
+        point3f urdf:link:inertial:origin:xyz = (0, 0, 0)
+        matrix4d xformOp:transform = ( (-0.0000037391993661373135, 0.9999999999930093, 0, 0), (-0.9999999999930093, -0.0000037391993661373135, 0, 0), (0, 0, 1, 0), (1.1964999437332153, 3.903700113296509, 0.9268059730529785, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+
+        def Mesh "SM_fridge_collision_0" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Fridge_001.usda@</SM_UCX_Fridge_001>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (3.1415927, -1.5707964, 0)
+            point3f urdf:collision:origin:xyz = (0.04630071, -0.0010071993, 0.9126619)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Fridge_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0, 0.999999999999999, 0), (8.742278000372465e-8, -0.999999999999996, 3.8213712347318754e-15, 0), (0.9999999999999952, 8.742278000372473e-8, 4.371139006309477e-8, 0), (0.04630070924758911, -0.0010071992874145508, 0.9126619100570679, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_fridge_collision_1" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Fridge_002.usda@</SM_UCX_Fridge_002>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (0, 0, 1.5707964)
+            point3f urdf:collision:origin:xyz = (0.04630071, -0.0010071993, -0.3448381)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Fridge_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0.999999999999999, 0, 0), (-0.999999999999999, -4.371139006309477e-8, 0, 0), (0, 0, 1, 0), (0.04630070924758911, -0.0010071992874145508, -0.34483811259269714, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_fridge_collision_2" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Fridge_003.usda@</SM_UCX_Fridge_003>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (-0.27307606, -0.0010071993, -0.50257075)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Fridge_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (-0.27307605743408203, -0.0010071992874145508, -0.5025707483291626, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_fridge_collision_3" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Fridge_004.usda@</SM_UCX_Fridge_004>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (0, 0, 1.5707964)
+            point3f urdf:collision:origin:xyz = (-0.30807057, 0.2917208, -0.19446273)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Fridge_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0.999999999999999, 0, 0), (-0.999999999999999, -4.371139006309477e-8, 0, 0), (0, 0, 1, 0), (-0.308070570230484, 0.29172080755233765, -0.19446273148059845, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_fridge_collision_4" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Fridge_005.usda@</SM_UCX_Fridge_005>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (-0.3208376, 0.2722111, -0.19446273)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Fridge_005.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (-0.3208375871181488, 0.27221110463142395, -0.19446273148059845, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_fridge_collision_5" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Fridge_006.usda@</SM_UCX_Fridge_006>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (0, 0, 1.5707964)
+            point3f urdf:collision:origin:xyz = (0.04630071, 0.27149427, 0.55319417)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Fridge_006.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0.999999999999999, 0, 0), (-0.999999999999999, -4.371139006309477e-8, 0, 0), (0, 0, 1, 0), (0.04630070924758911, 0.2714942693710327, 0.5531941652297974, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_fridge_collision_6" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Fridge_007.usda@</SM_UCX_Fridge_007>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (0, 0, 1.5707964)
+            point3f urdf:collision:origin:xyz = (0.04630071, -0.27350575, 0.55319417)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Fridge_007.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0.999999999999999, 0, 0), (-0.999999999999999, -4.371139006309477e-8, 0, 0), (0, 0, 1, 0), (0.04630070924758911, -0.2735057473182678, 0.5531941652297974, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Mesh "SM_fridge_collision_7" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_Fridge_008.usda@</SM_UCX_Fridge_008>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0.23129928, -0.0010042787, 0.55319417)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_Fridge_008.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0.2312992811203003, -0.0010042786598205566, 0.5531941652297974, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def PhysicsRevoluteJoint "fridge_door_joint" (
+            prepend apiSchemas = ["UrdfJointAPI"]
+        )
+        {
+            uniform token physics:axis = "Z"
+            rel physics:body0 = </dlr_kitchen/fridge>
+            rel physics:body1 = </dlr_kitchen/fridge_door>
+            bool physics:collisionEnabled = 0
+            point3f physics:localPos0 = (-0.255, -0.298, 0.411)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 90.00021
+            vector3f urdf:joint:axis = (0, 0, 1)
+            prepend rel urdf:joint:child = </dlr_kitchen/fridge_door>
+            float urdf:joint:limit:effort = 1000
+            float urdf:joint:limit:lower = 0
+            float urdf:joint:limit:upper = 1.5708001
+            float urdf:joint:limit:velocity = 1000
+            float3 urdf:joint:origin:rpy = (0, 0, 0)
+            point3f urdf:joint:origin:xyz = (-0.255, -0.298, 0.411)
+            prepend rel urdf:joint:parent = </dlr_kitchen/fridge>
+            uniform token urdf:joint:type = "revolute"
+        }
+    }
+
+    def Xform "fridge_door" (
+        prepend apiSchemas = ["UrdfLinkAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI"]
+    )
+    {
+        point3f physics:centerOfMass = (-0.018694345, 0.29774404, -0.00002462171)
+        float3 physics:diagonalInertia = (1.8229358, 2.608146, 4.4221373)
+        bool physics:kinematicEnabled = 0
+        float physics:mass = 22.043718
+        quatf physics:principalAxes = (-0.5, -0.49999997, -0.5, 0.5)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 1.8229358
+        float urdf:link:inertial:inertia:iyy = 2.608146
+        float urdf:link:inertial:inertia:izz = 4.4221373
+        float urdf:link:inertial:mass = 22.043718
+        float3 urdf:link:inertial:origin:rpy = (1.5707963, 1.5707963, 0)
+        point3f urdf:link:inertial:origin:xyz = (-0.018694345, 0.29774404, -0.00002462171)
+        matrix4d xformOp:transform = ( (-0.0000037391993661373135, 0.9999999999930093, 0, 0), (-0.9999999999930093, -0.0000037391993661373135, 0, 0), (0, 0, 1, 0), (1.4945009050947657, 3.6487012323481034, 1.337805986404419, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+
+        def Mesh "SM_fridge_door_collision_0" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+            prepend references = @./dlr_kitchen/meshes/usd/UCX_FridgeDoor_001.usda@</SM_UCX_FridgeDoor_001>
+        )
+        {
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+            float[] primvars:displayOpacity = [1]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (-0.018694345, 0.29774404, -0.000024616718)
+            asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_FridgeDoor_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "inherited"
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (-0.01869434490799904, 0.2977440357208252, -0.000024616718292236328, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Xform "fridge_door_handle" (
+            prepend apiSchemas = ["UrdfLinkAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI"]
+        )
+        {
+            point3f physics:centerOfMass = (0.0066252495, 0.0042432663, 0.000022690358)
+            float3 physics:diagonalInertia = (0.000019355486, 0.00020893302, 0.00022138169)
+            float physics:mass = 0.07344738
+            quatf physics:principalAxes = (-0.65429753, -0.2680782, 0.65432507, 0.2681185)
+            float urdf:link:inertial:inertia:ixx = 0.000019355486
+            float urdf:link:inertial:inertia:iyy = 0.00020893302
+            float urdf:link:inertial:inertia:izz = 0.00022138169
+            float urdf:link:inertial:mass = 0.07344738
+            float3 urdf:link:inertial:origin:rpy = (1.5708169, -0.79304487, -1.5708785)
+            point3f urdf:link:inertial:origin:xyz = (0.0066252495, 0.0042432663, 0.000022690358)
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (-0.06551499664783478, 0.5762209892272949, -0.39390599727630615, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+
+            def Mesh "SM_fridge_door_handle_collision_0" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+                prepend references = @./dlr_kitchen/meshes/usd/UCX_FridgeDoorHandle_001.usda@</SM_UCX_FridgeDoorHandle_001>
+            )
+            {
+                uniform token physics:approximation = "convexHull"
+                bool physics:collisionEnabled = 1
+                color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+                float[] primvars:displayOpacity = [1]
+                float3 urdf:collision:origin:rpy = (0, 0, 1.5707964)
+                point3f urdf:collision:origin:xyz = (0.012037085, 0.012078096, 0.00002268888)
+                asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_FridgeDoorHandle_001.stl@
+                float3 urdf:geometry:mesh:scale = (1, 1, 1)
+                token visibility = "inherited"
+                matrix4d xformOp:transform = ( (-4.371139006309477e-8, 0.999999999999999, 0, 0), (-0.999999999999999, -4.371139006309477e-8, 0, 0), (0, 0, 1, 0), (0.012037085369229317, 0.01207809615880251, 0.000022688880562782288, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Mesh "SM_fridge_door_handle_collision_1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI"]
+                prepend references = @./dlr_kitchen/meshes/usd/UCX_FridgeDoorHandle_002.usda@</SM_UCX_FridgeDoorHandle_002>
+            )
+            {
+                uniform token physics:approximation = "convexHull"
+                bool physics:collisionEnabled = 1
+                color3f[] primvars:displayColor = [(0.9, 0.9, 0.9)]
+                float[] primvars:displayOpacity = [1]
+                float3 urdf:collision:origin:rpy = (0, 0, 0)
+                point3f urdf:collision:origin:xyz = (-0.0006018296, -0.0062195305, 0.00002268888)
+                asset urdf:geometry:mesh:filename = @./dlr_kitchen/meshes/stl/UCX_FridgeDoorHandle_002.stl@
+                float3 urdf:geometry:mesh:scale = (1, 1, 1)
+                token visibility = "inherited"
+                matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (-0.0006018296116963029, -0.00621953047811985, 0.000022688880562782288, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+        }
+    }
+
+    def Xform "milk_box" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+    )
+    {
+        point3f physics:centerOfMass = (0, 0, 0)
+        float3 physics:diagonalInertia = (0.0001, 0.0001, 0.0001)
+        float physics:mass = 0.1
+        quatf physics:principalAxes = (1, 0, 0, 0)
+        bool physics:rigidBodyEnabled = 1
+        matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (2.042181729463922, 3.8289005585775424, 1.0335656518259984, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+
+        def Mesh "milk_box_geom_visual_0_SM_MilkBox" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            prepend references = @./../milk_box/meshes/usd/milk_box.usda@</SM_MilkBox>
+        )
+        {
+            rel material:binding = </dlr_kitchen/milk_box/milk_box_geom_visual_0_SM_MilkBox/Materials/M_MilkBox>
+            color3f[] primvars:displayColor = [(0, 0, 0)]
+            float[] primvars:displayOpacity = [0]
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 0, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+
+            def Scope "Materials"
+            {
+                def Material "M_MilkBox" (
+                    prepend references = @./../milk_box/meshes/usd/milk_box.usda@</_materials/M_MilkBox>
+                )
+                {
+                }
+            }
+        }
+    }
+}
