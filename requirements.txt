@@ -1,0 +1,4 @@
+prior
+scipy
+solara
+widgetsnbextension

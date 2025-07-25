@@ -1,18 +1,5 @@
 #!/bin/bash
 
-for virtualenvwrapper in $(which virtualenvwrapper.sh) /usr/share/virtualenvwrapper/virtualenvwrapper.sh /usr/local/bin/virtualenvwrapper.sh /home/$USER/.local/bin/virtualenvwrapper.sh; do
-    if [ -f $virtualenvwrapper ]; then
-        . $virtualenvwrapper
-        break
-    fi
-done
-if [ ! -f $virtualenvwrapper ]; then
-    echo "virtualenvwrapper.sh not found"
-    exit 1
-fi
-
-workon multiverse
-
 HOUSE_NUMBER=$1
 
 # Check if the user input is a number
@@ -23,16 +10,14 @@ fi
 
 echo "Get house ${HOUSE_NUMBER}"
 
-cd $(dirname $0)
+cd $(dirname "$0") || exit
 
 OUTPUT_DIR=$PWD/../output
 
-HOUSE_DIR=$OUTPUT_DIR/house_${HOUSE_NUMBER}
-
 # Get the house from the Procthor
 
-python get_house.py --house=${HOUSE_NUMBER}
+python3 get_house.py --house="${HOUSE_NUMBER}"
 
 # # Convert the house into USD
 
-python procthor_to_scene.py --house=${HOUSE_NUMBER} --output_dir=${OUTPUT_DIR}
+python3 procthor_to_scene.py --house="${HOUSE_NUMBER}" --output_dir="${OUTPUT_DIR}"
