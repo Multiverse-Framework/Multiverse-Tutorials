@@ -1,0 +1,97 @@
+resources: 
+  - ./mujoco
+  - ./config
+
+worlds:
+  world:
+    real_time_factor: -1
+
+simulations:
+  scene_simulation:
+    simulator: mujoco
+    world:
+      name: world
+      path: scene_position.xml
+    config:
+      integrator: EULER
+      step_size: 0.002
+
+multiverse_server:
+  host: "tcp://127.0.0.1"
+  port: 7000
+
+multiverse_clients:
+  scene_simulation:
+    port: 7500
+    send:
+      body: ["position", "quaternion"]
+      joint: ["joint_rvalue", "joint_tvalue", "joint_linear_velocity", "joint_angular_velocity", "joint_force", "joint_torque"]
+      sensor: ["scalar"]
+    receive:
+      base_link: ["odometric_velocity"]
+
+  ros:
+    ros_nodes:    
+      publishers:
+        tf:
+          - meta_data:
+              world_name: world
+              length_unit: m
+              angle_unit: rad
+              mass_unit: kg
+              time_unit: s
+              handedness: rhs
+            port: 7301
+            topic: /tf
+            rate: 60
+            root_frame_id: map
+        laser_scan:
+          - meta_data:
+              world_name: world
+              length_unit: m
+              angle_unit: rad
+              mass_unit: kg
+              time_unit: s
+              handedness: rhs
+            port: 7302
+            topic: /laser_scan
+            rate: 60
+            frame_id: laser_mount
+            angle_min: -1.5708
+            angle_max: 1.5708
+            angle_increment: 0.004363333333333334
+            range_min: 0.01
+            range_max: 10.0
+            laser_name: laser
+        odom:
+          - meta_data:
+              world_name: world
+              length_unit: m
+              angle_unit: rad
+              mass_unit: kg
+              time_unit: s
+              handedness: rhs
+            port: 7303
+            odom_topic: /odom
+            tf_topic: /tf
+            rate: 60
+            body: base_link
+            frame_id: map
+      subscribers:
+        cmd_vel:
+          - meta_data:
+              world_name: world
+              length_unit: m
+              angle_unit: rad
+              mass_unit: kg
+              time_unit: s
+              handedness: rhs
+            port: 7200
+            topic: /cmd_vel
+            body: base_link
+
+    ros_run:
+      rviz:
+        config: rviz/rviz.rviz
+        robot_descriptions:
+          scene_description: urdf/scene.urdf
