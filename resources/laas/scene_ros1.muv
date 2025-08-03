@@ -28,6 +28,7 @@ multiverse_clients:
       joint: ["joint_rvalue", "joint_tvalue", "joint_linear_velocity", "joint_angular_velocity", "joint_force", "joint_torque"]
       sensor: ["scalar"]
     receive:
+      cylinder_with_arrow: ["position", "quaternion"]
       base_link: ["odometric_velocity"]
 
   ros:
@@ -89,9 +90,21 @@ multiverse_clients:
             port: 7200
             topic: /cmd_vel
             body: base_link
+        pose_stamped:
+          - meta_data:
+              world_name: world
+              length_unit: m
+              angle_unit: rad
+              mass_unit: kg
+              time_unit: s
+              handedness: rhs
+            port: 7201
+            topic: /cylinder_with_arrow/pose_stamped
+            body: cylinder_with_arrow
+            init_pose: [5, 2, 0, 1, 0, 0, 0]
 
     ros_run:
       rviz:
-        config: rviz/rviz.rviz
+        config: rviz/tiago_rviz.rviz
         robot_descriptions:
           scene_description: urdf/scene.urdf

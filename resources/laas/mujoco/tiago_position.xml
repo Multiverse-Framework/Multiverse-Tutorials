@@ -33,9 +33,9 @@
     <velocity name="wheel_right_joint_vel" joint="wheel_right_joint" ctrlrange="-5 5" kv="100"/>
   </actuator>
 
-  <!-- <keyframe>
+  <keyframe>
     <key name="home" ctrl="0.2 -1.34 -0.2 1.94 -1.57 1.37 0 0 0 0 0 0.15 0 0"
-      qpos="2.0 2.0 -0.985 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0 0 0.20 -1.34 -0.20 1.94 -1.57 1.37 0.0 0 0"/>
-  </keyframe> -->
+      qpos="2.0 2.0 0 0 0 0 0 0 0 0 0 0 0 0.15 0 0 0.20 -1.34 -0.20 1.94 -1.57 1.37 0.0 0 0"/>
+  </keyframe>
 
 </mujoco>

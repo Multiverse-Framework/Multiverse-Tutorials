@@ -2,7 +2,7 @@
 <robot name="scene_simulation" version="1.0">
   <link name="world">
     <visual name="laas">
-      <origin xyz="0 0 -0.991" rpy="1.5707 0.0 0"/>
+      <origin xyz="0 0 0" rpy="1.5707 0.0 0"/>
       <geometry>
         <mesh filename="file://scene/meshes/obj/laas.obj" scale="1.0 1.0 1.0"/>
       </geometry>
