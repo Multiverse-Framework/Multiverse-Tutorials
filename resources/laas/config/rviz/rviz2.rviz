@@ -275,6 +275,13 @@ Visualization Manager:
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /goal_pose
+    - Class: rviz_default_plugins/SetGoal
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /cylinder_with_arrow/pose_stamped
     - Class: rviz_default_plugins/PublishPoint
       Single click: true
       Topic:
